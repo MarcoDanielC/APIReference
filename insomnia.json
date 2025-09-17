@@ -1,0 +1,3356 @@
+{
+  "_type": "export",
+  "__export_format": 4,
+  "__export_date": "2025-07-23T20:15:16.613Z",
+  "__export_source": "insomnia.desktop.app:v2022.6.0",
+  "resources": [
+    {
+      "_id": "req_8805971103c241b2894833d336734555",
+      "parentId": "fld_eae9af58b0544573a6ba069cda658f93",
+      "modified": 1752556417550,
+      "created": 1752556400843,
+      "url": "{{host}}/management/api/v1.0/sandboxes('{{resourceGroupId}}')/resources('{{ermResourceId}}')/microsoft.substrate.ai.management.removePatch",
+      "name": "Removed Patch from Db",
+      "description": "Removes a patch from the Cosmos database. Provide the ```resource Group Id``` (or Sandbox Name) and the ```erm Resource Id``` as URL parameters. The request body must include the ```patch Id```.\n\n",
+      "method": "POST",
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n    \"patchId\" : \"{{patchId}}\"\n}"
+      },
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json"
+        }
+      ],
+      "authentication": {
+        "type": "bearer",
+        "token": "Token"
+      },
+      "metaSortKey": -1752555251587,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "fld_eae9af58b0544573a6ba069cda658f93",
+      "parentId": "fld_d64e6c5c93e5482fa2b9cd62739b58b1",
+      "modified": 1752554572866,
+      "created": 1752554572866,
+      "name": "Destructive Operation - PROCEED WITH EXTREME CAUTION",
+      "description": "",
+      "environment": {},
+      "environmentPropertyOrder": null,
+      "metaSortKey": -1752554572866,
+      "_type": "request_group"
+    },
+    {
+      "_id": "fld_d64e6c5c93e5482fa2b9cd62739b58b1",
+      "parentId": "fld_87a923049e184a688646903d44e7ef6a",
+      "modified": 1752554512192,
+      "created": 1752554512192,
+      "name": "ERM Resources",
+      "description": "",
+      "environment": {},
+      "environmentPropertyOrder": null,
+      "metaSortKey": -1752554512192,
+      "_type": "request_group"
+    },
+    {
+      "_id": "fld_87a923049e184a688646903d44e7ef6a",
+      "parentId": "fld_da833705bd1f4148801f9d785b3a8966",
+      "modified": 1753301363958,
+      "created": 1752550510035,
+      "name": "Management API - authenticate with Torus account",
+      "description": "",
+      "environment": {},
+      "environmentPropertyOrder": {},
+      "metaSortKey": -1752550510035,
+      "_type": "request_group"
+    },
+    {
+      "_id": "fld_da833705bd1f4148801f9d785b3a8966",
+      "parentId": "wrk_b2201eda0fb44f889b9700d8f0098cfb",
+      "modified": 1753300905034,
+      "created": 1752550488286,
+      "name": "ERM",
+      "description": "",
+      "environment": {},
+      "environmentPropertyOrder": {},
+      "metaSortKey": -1752550488286,
+      "_type": "request_group"
+    },
+    {
+      "_id": "wrk_b2201eda0fb44f889b9700d8f0098cfb",
+      "parentId": null,
+      "modified": 1753299475091,
+      "created": 1753299419957,
+      "name": "ERM",
+      "description": "",
+      "scope": "collection",
+      "_type": "workspace"
+    },
+    {
+      "_id": "req_16c021510ebe45fba8699279e05ec7e2",
+      "parentId": "fld_eae9af58b0544573a6ba069cda658f93",
+      "modified": 1752556317847,
+      "created": 1752556302111,
+      "url": "{{host}}/management/api/v1.0/sandboxes('{{resourceGroupId}}')/resources('{{ermResourceId}}')/microsoft.substrate.ai.management.softDelete",
+      "name": "Soft Delete ERM Resource",
+      "description": "Soft deletes a resource in Azure and updates the database. Provide the resource Group Id (or Sandbox Name) and the erm Resource Id as URL parameters.\n\nProvide the Web Parameters:  ```Resource Group Id```, ```Resource Id```.\n",
+      "method": "POST",
+      "body": {},
+      "parameters": [],
+      "headers": [],
+      "authentication": {
+        "type": "bearer",
+        "token": "Token"
+      },
+      "metaSortKey": -1752555251487,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_9760705dba824675a431b8797c36c64b",
+      "parentId": "fld_eae9af58b0544573a6ba069cda658f93",
+      "modified": 1752556350603,
+      "created": 1752556334589,
+      "url": "{{host}}/management/api/v1.0/sandboxes('{{resourceGroupId}}')/resources('{{ermResourceId}}')",
+      "name": "Delete ERM Resource",
+      "description": "Delete ERM Resource\n\nProvide the Web Parameters:  ```Resource Group Id```, ```Resource Id```.\n",
+      "method": "DELETE",
+      "body": {},
+      "parameters": [],
+      "headers": [],
+      "authentication": {
+        "type": "bearer",
+        "token": "Token"
+      },
+      "metaSortKey": -1752555251437,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_e257385fba42443aa2c89e22353a9c17",
+      "parentId": "fld_eae9af58b0544573a6ba069cda658f93",
+      "modified": 1752556091772,
+      "created": 1752556091772,
+      "url": "{{host}}/management/api/v1.0/sandboxes('{{resourceGroupId}}')/resources('{{ermResourceId}}')/microsoft.substrate.ai.management.revertPatch",
+      "name": "revert Patch",
+      "description": "revert Patch\n\nProvide the Web Parameters:  ```Resource Group Id```, ```Resource Id```.\n",
+      "method": "POST",
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n\t\"patchId\" : \"47b7b724-7853-4df1-aa27-b33bc6da0c4d\"\n}"
+      },
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json"
+        },
+        {
+          "name": "User-Agent",
+          "value": "insomnia/11.2.0"
+        }
+      ],
+      "authentication": {
+        "type": "bearer",
+        "token": "Token"
+      },
+      "metaSortKey": -1749452629436.5,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_54e4dc30ff6845f1b7a3e35e7f11beca",
+      "parentId": "fld_eae9af58b0544573a6ba069cda658f93",
+      "modified": 1752555361458,
+      "created": 1752555251387,
+      "url": "{{host}}/management/api/v1.0/sandboxes('{{resourceGroupId}}')/resources('{{ermResourceId}}')/microsoft.substrate.ai.management.removeRoleAssignment",
+      "name": "Delete Role Assignments",
+      "description": "Delete Role Assignments\n\nProvide the Web Parameters:  ```Resource Group Id```, ```Resource Id```.\n",
+      "method": "DELETE",
+      "body": {
+        "mimeType": "application/json",
+        "text": "\t{\n\t\t\"roleDefinitionId\": \"/subscriptions/3db54861-01a1-4ab7-b439-6ab996a21284/providers/Microsoft.Authorization/roleDefinitions/acdd72a7-3385-48ef-bd42-f606fba81ae7\",\n\t\t\"roleName\": \"Reader\",\n\t\t\"scope\": \"/\",\n\t\t\"aadPrincipalId\": \"a6e821ad-3cb1-4593-ad48-e1bf030bf93b\"\n\t}"
+      },
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json"
+        },
+        {
+          "name": "User-Agent",
+          "value": "insomnia/11.2.0"
+        }
+      ],
+      "authentication": {
+        "type": "bearer",
+        "token": "Token"
+      },
+      "metaSortKey": -1752555251387,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_838b17175c3b4614bf003818b5fd2bc9",
+      "parentId": "fld_bcdd6a457d384cbb8f6105502c8ebde3",
+      "modified": 1752556473096,
+      "created": 1752556460532,
+      "url": "{{host}}/management/api/v1.0/sandboxes('{{resourceGroupId}}')/resources('{{ermResourceId}}')/microsoft.substrate.ai.management.copyPatches",
+      "name": "Copy Patches",
+      "description": "Copy Patches\n\nProvide the Web Parameters:  ```Resource Group Id```, ```Resource Id```.\n",
+      "method": "POST",
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n\t\"destResourceId\":\"dataPlane1\",\n\t\"destResourceName\": \"datapln4\"\n}"
+      },
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json"
+        }
+      ],
+      "authentication": {
+        "type": "bearer",
+        "token": "Token"
+      },
+      "metaSortKey": -1752555624209,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "fld_bcdd6a457d384cbb8f6105502c8ebde3",
+      "parentId": "fld_d64e6c5c93e5482fa2b9cd62739b58b1",
+      "modified": 1752554552230,
+      "created": 1752554552230,
+      "name": "Change Operation - PROCEED WITH CAUTION",
+      "description": "Change Operation - PROCEED WITH CAUTION",
+      "environment": {},
+      "environmentPropertyOrder": null,
+      "metaSortKey": -1752554552230,
+      "_type": "request_group"
+    },
+    {
+      "_id": "req_33c1b98f57fd4c639e4d347a4211757c",
+      "parentId": "fld_bcdd6a457d384cbb8f6105502c8ebde3",
+      "modified": 1752556450067,
+      "created": 1752556437484,
+      "url": "{{host}}/management/api/v1.0/sandboxes('{{resourceGroupId}}')/resources('{{ermResourceId}}')/microsoft.substrate.ai.management.refreshErmResource",
+      "name": "Refresh ERM Resource",
+      "description": "Refresh ERM Resource\n\nProvide the Web Parameters:  ```Resource Group Id```, ```Resource Id```.\n",
+      "method": "POST",
+      "body": {},
+      "parameters": [],
+      "headers": [],
+      "authentication": {
+        "type": "bearer",
+        "token": "Token"
+      },
+      "metaSortKey": -1752555624109,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_932be10ed1b84f77b34dad660cda5e99",
+      "parentId": "fld_bcdd6a457d384cbb8f6105502c8ebde3",
+      "modified": 1752556375198,
+      "created": 1752556364061,
+      "url": "{{host}}/management/api/v1.0/sandboxes('{{resourceGroupId}}')/resources('{{ermResourceId}}')/microsoft.substrate.ai.management.cloneErmResource",
+      "name": "Clone ERM Resource",
+      "description": "Clone ERM Resource\n\nProvide the Web Parameters:  ```Resource Group Id```, ```Resource Id```.\n",
+      "method": "POST",
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n\t\"destResourceId\":\"controlPlane_v2\",\n\t\"destResourceName\": \"controlPlane_v2\"\n}"
+      },
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json"
+        }
+      ],
+      "authentication": {
+        "type": "bearer",
+        "token": "Token"
+      },
+      "metaSortKey": -1752555624009,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_26a64b57027941168124cac6e284756b",
+      "parentId": "fld_bcdd6a457d384cbb8f6105502c8ebde3",
+      "modified": 1752556254390,
+      "created": 1752556223036,
+      "url": "{{host}}/management/api/v1.0/sandboxes('{{resourceGroupId}}')/resources('{{ermResourceId}}')/microsoft.substrate.ai.management.softCreate",
+      "name": "Soft Create ERM Resource",
+      "description": "Soft Create ERM Resource\n\nProvide the Web Parameters:  ```Resource Group Id```, ```Resource Id```.\n",
+      "method": "POST",
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n    \"type\": \"microsoft.substrate.ai.management.adfResource\",\n    \"@odata.type\": \"#microsoft.substrate.ai.management.adfResource\",\n    \"resourceType\": \"adf\",\n    \"id\": \"adf\"\n}"
+      },
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json"
+        }
+      ],
+      "authentication": {
+        "type": "bearer",
+        "token": "Token"
+      },
+      "metaSortKey": -1752555623909,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_6d5b61f1dedc4dcf93cade96ff5c5dd1",
+      "parentId": "fld_bcdd6a457d384cbb8f6105502c8ebde3",
+      "modified": 1752555822444,
+      "created": 1752555807512,
+      "url": "{{host}}/management/api/v1.0/sandboxes('{{resourceGroupId}}')/resources('{{ermResourceId}}')/microsoft.substrate.ai.management.upsertGlobalParameters",
+      "name": "Upsert Global Parameters",
+      "description": "Upsert Global Parameters\n\nProvide the Web Parameters:  ```Resource Group Id```, ```Resource Id```.\n",
+      "method": "POST",
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n    \"globalParameters\": [\n        {\n            \"key\": \"Testing\",\n            \"type\": \"string\",\n            \"owner\": \"platformManaged\",\n            \"value\": \"Testing value\"\n        }\n    ]\n}"
+      },
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json"
+        }
+      ],
+      "authentication": {
+        "type": "bearer",
+        "token": "Token"
+      },
+      "metaSortKey": -1752555623809,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_99a8e57d6cf74cdebbf34ffd12d4ae96",
+      "parentId": "fld_bcdd6a457d384cbb8f6105502c8ebde3",
+      "modified": 1752555762334,
+      "created": 1752555731952,
+      "url": "{{host}}/management/api/v1.0/sandboxes('{{resourceGroupId}}')/resources('{{ermResourceId}}')",
+      "name": "Patch ERM Resource",
+      "description": "Patch ERM Resource\n\nProvide the Web Parameters:  ```Resource Group Id```, ```Resource Id```.\n",
+      "method": "PATCH",
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n  \"type\": \"microsoft.substrate.ai.management.adlsGen2Resource\",\n\t\"@odata.type\": \"#microsoft.substrate.ai.management.adlsGen2Resource\",\n\t\"resourceCategory\": \"production\",\n\t\"storageSkuName\": \"standardragrs\"\n}"
+      },
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json"
+        }
+      ],
+      "authentication": {
+        "type": "bearer",
+        "token": "Token"
+      },
+      "metaSortKey": -1752555623709,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_1c656d50145c4e9c934d45d5ef35d4d5",
+      "parentId": "fld_bcdd6a457d384cbb8f6105502c8ebde3",
+      "modified": 1752555711907,
+      "created": 1752555623609,
+      "url": "{{host}}/management/api/v1.0/sandboxes('{{resourceGroupId}}')/resources('{{ermResourceId}}')",
+      "name": "Create ERM Resource",
+      "description": "Create ERM Resource\n\nProvide the Web Parameters:  ```Resource Group Id```, ```Resource Id```.\n",
+      "method": "PUT",
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n    \"type\": \"microsoft.substrate.ai.management.adlsGen2Resource\",\n    \"@odata.type\": \"#microsoft.substrate.ai.management.adlsGen2Resource\",\n    \"resourceType\": \"controlPlane\",\n    \"id\": \"controlPlane\",\n    \"resourceGroupName\": \"MarcoIntegrationTesting\",\n    \"name\": \"adls123123123\",\n    \"resourceStatus\": 2,\n    \"extractionLinkedServiceDeploymentDisabled\": true,\n    \"odpgRoleAssignmentDeploymentDisabled\": true,\n\t\t\"dataManagement\" : {\n    \t\"platformDataCategory\" : \"systemMetadata\"\n\t\t},\n\t\t\"storageRole\" : \"controlPlane, logsPlane\"\n}"
+      },
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json"
+        },
+        {
+          "name": "User-Agent",
+          "value": "insomnia/11.2.0"
+        }
+      ],
+      "authentication": {
+        "type": "bearer",
+        "token": "Token"
+      },
+      "metaSortKey": -1752555623609,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "fld_501bde2917174cc081f43ce8f106a438",
+      "parentId": "fld_bcdd6a457d384cbb8f6105502c8ebde3",
+      "modified": 1752556130390,
+      "created": 1752556091717,
+      "name": "Common Patches",
+      "description": "Common Patches",
+      "environment": {},
+      "environmentPropertyOrder": null,
+      "metaSortKey": -1752555623559,
+      "_type": "request_group"
+    },
+    {
+      "_id": "req_8fda3799cb0b4b9f8f0d53c2c6cb978d",
+      "parentId": "fld_d552a9ef9ebc44808462ffb9fcb2271d",
+      "modified": 1752556091770,
+      "created": 1752556091770,
+      "url": "{{host}}/management/api/v1.0/sandboxes('{{resourceGroupId}}')/resources('{{ermResourceId}}')/microsoft.substrate.ai.management.patchErmResource",
+      "name": "Update Synapse Big Data Pool Configuration",
+      "description": "Update Synapse Big Data Pool Configuration\n\nProvide the Web Parameters:  ```Resource Group Id```, ```Resource Id```.\n",
+      "method": "POST",
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\r\n\t\"patch\":\r\n\t{\r\n\t\t\"@odata.type\": \"#microsoft.substrate.ai.management.updateSynapseBigDataPoolConfig\",\r\n        \"id\": \"{% uuid 'v4' %}\",\r\n\t\t\"autoPauseProperties\":{\r\n            \"enabled\": true,\r\n            \"delayInMinutes\": DESIRED_COUNT\r\n        },\r\n        \"dynamicExecutorAllocation\":{\r\n            \"enabled\": true,\r\n            \"minExecutors\": DESIRED_COUNT,\r\n            \"maxExecutors\": DESIRED_COUNT\r\n        },\r\n        \"sparkVersion\": \"spark3_3\" // Possible values are: \"spark3_1\", \"spark3_3\"\r\n\t}\r\n}"
+      },
+      "parameters": [],
+      "headers": [],
+      "authentication": {
+        "type": "bearer",
+        "token": "Token"
+      },
+      "metaSortKey": -1710448757806,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "fld_d552a9ef9ebc44808462ffb9fcb2271d",
+      "parentId": "fld_501bde2917174cc081f43ce8f106a438",
+      "modified": 1752556091768,
+      "created": 1752556091768,
+      "name": "Synapse Big Data Pool",
+      "description": "Synapse Big Data Pool",
+      "environment": {},
+      "environmentPropertyOrder": null,
+      "metaSortKey": -1710448757804,
+      "_type": "request_group"
+    },
+    {
+      "_id": "req_f545c29b53af4250aa29faa6d7f27d9c",
+      "parentId": "fld_d552a9ef9ebc44808462ffb9fcb2271d",
+      "modified": 1752556091769,
+      "created": 1752556091769,
+      "url": "{{host}}/management/api/v1.0/sandboxes('{{resourceGroupId}}')/resources('{{ermResourceId}}')/microsoft.substrate.ai.management.patchErmResource",
+      "name": "Resize Big Data Pool",
+      "description": "Resize Big Data Pool\n\nProvide the Web Parameters:  ```Resource Group Id```, ```Resource Id```.\n",
+      "method": "POST",
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n\t\"patch\":\n\t{\n\t\t\"@odata.type\": \"#microsoft.substrate.ai.management.bigDataPoolSize\",\n        \"id\": \"{% uuid 'v4' %}\",\n\t\t\"minInstanceCount\": DESIRED_COUNT,\n        \"maxInstanceCount\": DESIRED_COUNT,\n        \"nodeSize\": \"medium\" // Possible values are: \"small\", \"medium\", \"large\", \"xlarge\", \"xxlarge\", \"xxxlarg\"\n\t}\n}"
+      },
+      "parameters": [],
+      "headers": [],
+      "authentication": {
+        "type": "bearer",
+        "token": "Token"
+      },
+      "metaSortKey": -1710448757805,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_70237475169c4249981dd235ab9318f4",
+      "parentId": "fld_bd2556dab7014146875e54c672325ffa",
+      "modified": 1752556091767,
+      "created": 1752556091767,
+      "url": "{{host}}/management/api/v1.0/sandboxes('{{resourceGroupId}}')/resources('{{ermResourceId}}')/microsoft.substrate.ai.management.patchErmResource",
+      "name": "Assign Custom Orchestrator",
+      "description": "Assign Custom Orchestrator\n\nProvide the Web Parameters:  ```Resource Group Id```, ```Resource Id```.\n",
+      "method": "POST",
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n\t\"patch\":\n\t{\n\t\t\"@odata.type\": \"#microsoft.substrate.ai.management.customOrchestratorToSynapse\", \n\t\t\"id\": \"{% uuid 'v4' %}\", \n\t\t\"managedIdentity\": \"00000000-0000-0000-0000-000000000000\",\n\t\t\"dataPlaneStorageAccount\": \"/subscriptions/SUBSCRIPTION_ID/resourceGroups/REDSOURCE_GROUP_NAME/providers/Microsoft.Storage/storageAccounts/STORAGE_ACCOUNT_NAME\"\n\t}\n}"
+      },
+      "parameters": [],
+      "headers": [],
+      "authentication": {
+        "type": "bearer"
+      },
+      "metaSortKey": -1715025023375,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "fld_bd2556dab7014146875e54c672325ffa",
+      "parentId": "fld_501bde2917174cc081f43ce8f106a438",
+      "modified": 1752556091764,
+      "created": 1752556091764,
+      "name": "Synapse Workspace",
+      "description": "Synapse Workspace",
+      "environment": {},
+      "environmentPropertyOrder": null,
+      "metaSortKey": -1710448757802,
+      "_type": "request_group"
+    },
+    {
+      "_id": "req_6b881193bb8a467da3969e3b84a2e5b1",
+      "parentId": "fld_bd2556dab7014146875e54c672325ffa",
+      "modified": 1752556091766,
+      "created": 1752556091766,
+      "url": "{{host}}/management/api/v1.0/sandboxes('{{resourceGroupId}}')/resources('{{ermResourceId}}')/microsoft.substrate.ai.management.patchErmResource",
+      "name": "Assign Synapse Role",
+      "description": "Assign Synapse Role\n\nProvide the Web Parameters:  ```Resource Group Id```, ```Resource Id```.\n",
+      "method": "POST",
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n\t\"patch\":\n\t{\n\t\t\"@odata.type\": \"#microsoft.substrate.ai.management.assignSynapseRole\", // Fixed\n        \"id\": \"{% uuid 'v4' %}\", // Random Guid\n\t\t\"synapseRoleName\": \"Synapse Administrator\", // Possible values are available at https://docs.microsoft.com/en-us/azure/synapse-analytics/security/synapse-workspace-synapse-rbac-roles\n        \"objectId\": \"\" // Guid of the AAD Object Id - Can be a User, Group, MSI, etc.\n\t}\n}"
+      },
+      "parameters": [],
+      "headers": [],
+      "authentication": {
+        "type": "bearer",
+        "token": "Token"
+      },
+      "metaSortKey": -1710448757803,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_610727e2d8e9464c8ccf071eda0c44bd",
+      "parentId": "fld_e6a0adb2e61f4abba6321796ac8bfdee",
+      "modified": 1752556091758,
+      "created": 1752556091758,
+      "url": "{{host}}/management/api/v1.0/sandboxes('{{resourceGroupId}}')/resources('{{ermResourceId}}')/microsoft.substrate.ai.management.patchErmResource",
+      "name": "Enable Garbage Collection",
+      "description": "Enable Garbage Collection\n\nProvide the Web Parameters:  ```Resource Group Id```, ```Resource Id```.\n",
+      "method": "POST",
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n    \"patch\": {\n        \"@odata.type\": \"#microsoft.substrate.ai.management.enableGarbageCollection\",\n        \"id\": \"{% uuid 'v4' %}\"\n    }\n}"
+      },
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json"
+        }
+      ],
+      "authentication": {
+        "type": "bearer",
+        "token": "Token"
+      },
+      "metaSortKey": -1710448757801,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "fld_e6a0adb2e61f4abba6321796ac8bfdee",
+      "parentId": "fld_501bde2917174cc081f43ce8f106a438",
+      "modified": 1752556091744,
+      "created": 1752556091744,
+      "name": "Storage",
+      "description": "Storage",
+      "environment": {},
+      "environmentPropertyOrder": null,
+      "metaSortKey": -1710448757790,
+      "_type": "request_group"
+    },
+    {
+      "_id": "req_a789c2fe1be549d8aa80ba8368fb3b5b",
+      "parentId": "fld_e6a0adb2e61f4abba6321796ac8bfdee",
+      "modified": 1752556091756,
+      "created": 1752556091756,
+      "url": "{{host}}/management/api/v1.0/sandboxes('{{resourceGroupId}}')/resources('{{ermResourceId}}')/microsoft.substrate.ai.management.patchErmResource",
+      "name": "Enable Byod",
+      "description": "Enable Byod\n\nProvide the Web Parameters:  ```Resource Group Id```, ```Resource Id```.\n",
+      "method": "POST",
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n    \"patch\": {\n        \"@odata.type\": \"#microsoft.substrate.ai.management.enableByod\",\n        \"id\": \"{% uuid 'v4' %}\"\n    }\n}"
+      },
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json"
+        }
+      ],
+      "authentication": {
+        "type": "bearer",
+        "token": "Token"
+      },
+      "metaSortKey": -1710448757800,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_f99fa54fcd7c40b392c11dc28100fbcc",
+      "parentId": "fld_e6a0adb2e61f4abba6321796ac8bfdee",
+      "modified": 1752556091754,
+      "created": 1752556091754,
+      "url": "{{host}}/management/api/v1.0/sandboxes('{{resourceGroupId}}')/resources('{{ermResourceId}}')/microsoft.substrate.ai.management.patchErmResource",
+      "name": "SPN - Link Adf to external Blob Storage",
+      "description": "SPN - Link Adf to external Blob Storage\n\nProvide the Web Parameters:  ```Resource Group Id```, ```Resource Id```, ```subscriptionId```, ```applicationObjectId```, ```objectId```.\n",
+      "method": "POST",
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n    \"patch\": {\n        \"@odata.type\": \"#microsoft.substrate.ai.management.linkAdfToStorage\",\n        \"id\": \"{% uuid 'v4' %}\",\n        \"linkedServiceName\": \"linkedServiceName\",\n        \"roleDefinitionName\": \"Storage Blob Data Contributor (If you don't provide Role, then there is not role assignment)\",\n        \"externalStorageInformation\": {\n            \"@odata.type\": \"#microsoft.substrate.ai.management.externalBlobStorageInformation\",\n            \"resourceId\": \"adf\",\n            \"storageName\": \"storageName\",\n            \"serverDomain\": \"serverDomain\",\n            \"subscriptionId\": \"{{subscriptionId}}\",\n            \"resourceGroupName\": \"resourceGroupName\"\n        },\n        \"spn\": {\n            \"@odata.type\": \"#microsoft.substrate.ai.management.applicationServicePrincipal\",\n            \"name\": \"spnName\",\n            \"applicationObjectId\": \"{{applicationObjectId}}\",\n            \"objectId\": \"{{objectId}}\",\n            \"secretName\": \"secretName\"\n        }\n    }\n}"
+      },
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json"
+        }
+      ],
+      "authentication": {
+        "type": "bearer",
+        "token": "Token"
+      },
+      "metaSortKey": -1710448757799,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_a490e6fafe1b4adaa2bf65e116701f92",
+      "parentId": "fld_e6a0adb2e61f4abba6321796ac8bfdee",
+      "modified": 1752556091753,
+      "created": 1752556091753,
+      "url": "{{host}}/management/api/v1.0/sandboxes('{{resourceGroupId}}')/resources('{{ermResourceId}}')/microsoft.substrate.ai.management.patchErmResource",
+      "name": "Link Adf with Dynamic properties",
+      "description": "Link Adf with Dynamic properties\n\nProvide the Web Parameters:  ```Resource Group Id```, ```Resource Id```.\n",
+      "method": "POST",
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n  \"patch\": {\n    \"@odata.type\": \"#microsoft.substrate.ai.management.linkAdfToDynamicStorage\",\n    \"id\": \"c3a8138a-42c1-47e9-8577-dd9bca08da46\",\n    \"linkedServiceName\": \"dynamicStorageLinkedService2\",\n    \"storageInformation\": {\n      \"@odata.type\": \"#microsoft.substrate.ai.management.dynamicAdlsGen2Information\"\n    },\n    \"spn\": null,\n    \"parameters\": [\n      {\n        \"key\": \"targetStorageAccount\",\n        \"type\": \"string\",\n        \"value\": \"https://storage.url.com\",\n        \"dynamicField\": \"url\"\n      }\n    ]\n  }\n}"
+      },
+      "parameters": [],
+      "headers": [],
+      "authentication": {
+        "type": "bearer",
+        "token": "Token"
+      },
+      "metaSortKey": -1710448757798,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_18a9e09eef2a40509d013d583365b84b",
+      "parentId": "fld_e6a0adb2e61f4abba6321796ac8bfdee",
+      "modified": 1752556091752,
+      "created": 1752556091752,
+      "url": "{{host}}/management/api/v1.0/sandboxes('{{resourceGroupId}}')/resources('{{ermResourceId}}')/microsoft.substrate.ai.management.patchErmResource",
+      "name": "Link Adf to external ADLS Gen2",
+      "description": "Link Adf to external ADLS Gen2\n\nProvide the Web Parameters:  ```Resource Group Id```, ```Resource Id```.\n",
+      "method": "POST",
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n    \"patch\": {\n        \"@odata.type\": \"#microsoft.substrate.ai.management.linkAdfToStorage\",\n        \"id\": \"{% uuid 'v4' %}\",\n        \"linkedServiceName\": \"linkedServiceName\",\n        \"roleDefinitionName\": \"Storage Blob Data Contributor (If you don't provide Role, then there is not role assignment)\",\n        \"externalStorageInformation\": {\n            \"@odata.type\": \"#microsoft.substrate.ai.management.externalAdlsGen2Information\",\n            \"resourceId\": \"adf\",\n            \"storageName\": \"storageName\",\n            \"subscriptionId\": \"{{subscriptionId}}\",\n            \"resourceGroupName\": \"resourceGroupName\"\n        },\n        \"spn\": {\n            \"@odata.type\": \"#microsoft.substrate.ai.management.applicationServicePrincipal\",\n            \"name\": \"spnName\",\n            \"applicationObjectId\": \"{{applicationObjectId}}\",\n            \"objectId\": \"{{objectId}}\",\n            \"secretName\": \"secretName\"\n        }\n    }\n}"
+      },
+      "parameters": [],
+      "headers": [],
+      "authentication": {
+        "type": "bearer",
+        "token": "Token"
+      },
+      "metaSortKey": -1710448757797,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_49373c06a228434fbd4f7334bdaae42c",
+      "parentId": "fld_e6a0adb2e61f4abba6321796ac8bfdee",
+      "modified": 1752556091750,
+      "created": 1752556091750,
+      "url": "{{host}}/management/api/v1.0/sandboxes('{{resourceGroupId}}')/resources('{{ermResourceId}}')/microsoft.substrate.ai.management.patchErmResource",
+      "name": "Link Adf to external ADLS Gen1",
+      "description": "Link Adf to external ADLS Gen1\n\nProvide the Web Parameters:  ```Resource Group Id```, ```Resource Id```.\n",
+      "method": "POST",
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n    \"patch\": {\n        \"@odata.type\": \"#microsoft.substrate.ai.management.linkAdfToStorage\",\n        \"id\": \"{% uuid 'v4' %}\",\n        \"linkedServiceName\": \"linkedServiceName\",\n        \"roleDefinitionName\": \"Contributor (If you don't provide Role, then there is not role assignment)\",\n        \"externalStorageInformation\": {\n            \"@odata.type\": \"#microsoft.substrate.ai.management.externalAdlsGen1Information\",\n            \"resourceId\": \"adf\",\n            \"storageName\": \"storageName\",\n            \"subscriptionId\": \"{{subscriptionId}}\",\n            \"resourceGroupName\": \"resourceGroupName\"\n        },\n        \"spn\": {\n            \"@odata.type\": \"#microsoft.substrate.ai.management.applicationServicePrincipal\",\n            \"name\": \"spnName\",\n            \"applicationObjectId\": \"{{applicationObjectId}}\",\n            \"objectId\": \"{{objectId}}\",\n            \"secretName\": \"secretName\"\n        }\n    }\n}"
+      },
+      "parameters": [],
+      "headers": [],
+      "authentication": {
+        "type": "bearer",
+        "token": "Token"
+      },
+      "metaSortKey": -1710448757795,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_b1cb4494c64e44f9a351762655cb5bf4",
+      "parentId": "fld_e6a0adb2e61f4abba6321796ac8bfdee",
+      "modified": 1752556091749,
+      "created": 1752556091749,
+      "url": "{{host}}/management/api/v1.0/sandboxes('{{resourceGroupId}}')/resources('{{ermResourceId}}')/microsoft.substrate.ai.management.patchErmResource",
+      "name": "SPN - Set Role Assignment",
+      "description": "SPN - Set Role Assignment\n\nProvide the Web Parameters:  ```Resource Group Id```, ```Resource Id```.\n",
+      "method": "POST",
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n    \"patch\": {\n        \"@odata.type\": \"#microsoft.substrate.ai.management.setRoleAssignment\",\n        \"id\": \"da42c1e0-dd69-4137-9d41-ce14441d0828\",\n        \"roleDefinitionName\": \"Reader\",\n        \"servicePrincipal\": {\n            \"@odata.type\": \"#microsoft.substrate.ai.management.applicationServicePrincipal\",\n            \"name\": \"spn-name\",\n            \"objectId\": \"a4535d40-dd3b-4dbf-99fa-efb52fbab708\",\n\t\t\t\t\t\t\"applicationId\": \"a4535d40-dd3b-4dbf-99fa-efb52fbab708\"\n        },\n\t\t\t\"patchDefinition\" : {\n\t\t\t\t\t\"description\": \"Assign Reader role to SPN\",\n\t\t\t\t\t\"metadata\": {\n\t\t\t\t\t\t\"requestedBy\": \"Marco Cameros\",\n\t\t\t\t\t\t\"timestamp\": \"2025-06-09T15:00:00Z\"\n\t\t\t\t\t}\n\u00a0\u00a0\u00a0\t }\n\t\t}\n}"
+      },
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json"
+        }
+      ],
+      "authentication": {
+        "type": "bearer",
+        "token": "Token"
+      },
+      "metaSortKey": -1710448757794,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_0fdb4a02af3648d687a69e94047ab62e",
+      "parentId": "fld_e6a0adb2e61f4abba6321796ac8bfdee",
+      "modified": 1752556091747,
+      "created": 1752556091747,
+      "url": "{{host}}/management/api/v1.0/sandboxes('{{resourceGroupId}}')/resources('{{ermResourceId}}')/microsoft.substrate.ai.management.patchErmResource",
+      "name": "MSI - Set Role Assignment",
+      "description": "MSI - Set Role Assignment\n\nProvide the Web Parameters:  ```Resource Group Id```, ```Resource Id```.\n",
+      "method": "POST",
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n    \"patch\": {\n        \"@odata.type\": \"#microsoft.substrate.ai.management.setRoleAssignment\",\n        \"id\": \"da42c1e0-dd69-4137-9d41-ce14441d0828\",\n        \"roleDefinitionName\": \"Role definition to use\",\n        \"servicePrincipal\": {\n            \"@odata.type\": \"#microsoft.substrate.ai.management.managedServicePrincipal\",\n            \"name\": \"MSI Name\",\n            \"objectId\": \"MSI Object ID\"\n        }\n    }\n}"
+      },
+      "parameters": [],
+      "headers": [],
+      "authentication": {
+        "type": "bearer",
+        "token": "Token"
+      },
+      "metaSortKey": -1710448757793,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_cfc628c81008465fad338835bdaa0d0a",
+      "parentId": "fld_e6a0adb2e61f4abba6321796ac8bfdee",
+      "modified": 1752556091746,
+      "created": 1752556091746,
+      "url": "{{host}}/management/api/v1.0/sandboxes('{{resourceGroupId}}')/resources('{{ermResourceId}}')/microsoft.substrate.ai.management.patchErmResource",
+      "name": "Create Containers and Directories",
+      "description": "Create Containers and Directories\n\nProvide the Web Parameters:  ```Resource Group Id```, ```Resource Id```.\n",
+      "method": "POST",
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n    \"patch\": {\n        \"@odata.type\": \"#microsoft.substrate.ai.management.createContainersAndDirectories\",\n        \"id\": \"da42c1e0-dd69-4137-9d40-ce14441d0928\",\n        \"containersAndDirectories\": [\n            {\n                \"containerName\": \"anakin\", \n                \"directories\": [\"luke\", \"leia/ben\"]\n            },\n            {\n                \"containerName\": \"obiwan\"\n            }\n        ]\n    }\n}"
+      },
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json"
+        }
+      ],
+      "authentication": {
+        "type": "bearer",
+        "token": "Token"
+      },
+      "metaSortKey": -1710448757791,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_c0a3ffb438d44329a79f06c8a8a32b56",
+      "parentId": "fld_e6a0adb2e61f4abba6321796ac8bfdee",
+      "modified": 1752556091759,
+      "created": 1752556091759,
+      "url": "{{host}}/management/api/v1.0/sandboxes('{{resourceGroupId}}')/resources('{{ermResourceId}}')/microsoft.substrate.ai.management.patchErmResource",
+      "name": "CMK - Create Tenant Container Patch",
+      "description": "CMK - Create Tenant Container Patch\n\nProvide the Web Parameters:  ```Resource Group Id```, ```Resource Id```.\n",
+      "method": "POST",
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n\t\"patch\":\n\t{\n\t\t\"@odata.type\": \"#microsoft.substrate.ai.management.createTenantContainer\",\n    \"id\": \"generate new guid for patchId\",\n\t\t\"containerName\": \"the name of the container\",\n    \"tenantId\": \"The tenantId of the CMK Tenant for whom container needs to be created\"\n\t}\n}"
+      },
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json"
+        }
+      ],
+      "authentication": {
+        "type": "bearer",
+        "token": "Token"
+      },
+      "metaSortKey": -1710448757790,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_e8f2e9e172a54ff7baaa637ebb35a3b6",
+      "parentId": "fld_e6a0adb2e61f4abba6321796ac8bfdee",
+      "modified": 1752556091760,
+      "created": 1752556091760,
+      "url": "{{host}}/management/api/v1.0/sandboxes('{{resourceGroupId}}')/resources('{{ermResourceId}}')/microsoft.substrate.ai.management.patchErmResource",
+      "name": "CMK - Delete Tenant Container Patch",
+      "description": "CMK - Delete Tenant Container Patch\n\nProvide the Web Parameters:  ```Resource Group Id```, ```Resource Id```.\n",
+      "method": "POST",
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n\t\t\"patch\":\n\t\t{\n\t\t\t\"@odata.type\": \"#microsoft.substrate.ai.management.deleteTenantContainer\",\n\t    \"id\": \"generate new guid for patchId\",\n\t\t\t\"containerName\": \"the name of the container\",\n\t    \"isCmkEncryptedTenantContainer\": true\n\t\t}\n}"
+      },
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json"
+        }
+      ],
+      "authentication": {
+        "type": "bearer",
+        "token": "Token"
+      },
+      "metaSortKey": -1710448757789.5,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_9cf9fac6a87d4220a5842c37fea69913",
+      "parentId": "fld_e6a0adb2e61f4abba6321796ac8bfdee",
+      "modified": 1752556091762,
+      "created": 1752556091762,
+      "url": "{{host}}/management/api/v1.0/sandboxes('{{resourceGroupId}}')/resources('{{ermResourceId}}')/microsoft.substrate.ai.management.patchErmResource",
+      "name": "CMK - Set Or Update Container Metadata",
+      "description": "CMK - Set Or Update Container Metadata\n\nProvide the Web Parameters:  ```Resource Group Id```, ```Resource Id```.\n",
+      "method": "POST",
+      "body": {
+        "mimeType": "application/json",
+        "text": "\t{\n\t    \"patch\": {\n\t        \"@odata.type\": \"#microsoft.substrate.ai.setOrUpdateContainerMetadata\",\n\t        \"id\": \"generate new guid for patchId\",\n\t        \"containerName\": \"the name of the container\",\n\t        \"metadata\": [\n\t            {\n\t                \"key\": \"key1\",\n\t                \"value\": \"value1\"\n\t            }\n\t        ]\n\t    }\n}"
+      },
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json"
+        }
+      ],
+      "authentication": {
+        "type": "bearer",
+        "token": "Token"
+      },
+      "metaSortKey": -1710448757789.25,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_b3ede6e1b7d644418a884fb00af4167d",
+      "parentId": "fld_3621048fa95c4622a61a84288d46e5b5",
+      "modified": 1752556091741,
+      "created": 1752556091741,
+      "url": "{{host}}/management/api/v1.0/sandboxes('{{resourceGroupId}}')/resources('{{ermResourceId}}')/microsoft.substrate.ai.management.patchErmResource",
+      "name": "Add Key Vault Access Policy",
+      "description": "Add Key Vault Access Policy\n\nProvide the Web Parameters:  ```Resource Group Id```, ```Resource Id```.\n",
+      "method": "POST",
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n    \"patch\": {\n        \"@odata.type\": \"#microsoft.substrate.ai.management.addKeyVaultAccessPolicy\",\n        \"id\": \"\",\n        \"objectId\":\"\",\n        \"certificatePermissions\":[\"get\"]\n    }\n}"
+      },
+      "parameters": [],
+      "headers": [],
+      "authentication": {
+        "type": "bearer",
+        "token": "Token"
+      },
+      "metaSortKey": -1710448757789,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "fld_3621048fa95c4622a61a84288d46e5b5",
+      "parentId": "fld_501bde2917174cc081f43ce8f106a438",
+      "modified": 1752556091738,
+      "created": 1752556091738,
+      "name": "Key Vault",
+      "description": "Key Vault",
+      "environment": {},
+      "environmentPropertyOrder": null,
+      "metaSortKey": -1710448757785,
+      "_type": "request_group"
+    },
+    {
+      "_id": "req_0ecdd691579f46e0a669bf990e61d984",
+      "parentId": "fld_3621048fa95c4622a61a84288d46e5b5",
+      "modified": 1752556091740,
+      "created": 1752556091740,
+      "url": "{{host}}/management/api/v1.0/sandboxes('{{resourceGroupId}}')/resources('{{ermResourceId}}')/microsoft.substrate.ai.management.patchErmResource",
+      "name": "Create Or Replace Certificate Issuer",
+      "description": "Create Or Replace Certificate Issuer\n\nProvide the Web Parameters:  ```Resource Group Id```, ```Resource Id```.\n",
+      "method": "POST",
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n        \"patch\": {\n        \"@odata.type\": \"#microsoft.substrate.ai.management.createOrReplaceCertificateIssuer\",\n        \"id\": \"da42c1e0-dd69-4137-9d40-ce13441d1918\",\n        \"issuerName\": \"OneCertV2PrivateCAIssuer\",\n        \"provider\": \"OneCertV2-PrivateCA\"\n    }\n}"
+      },
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json"
+        }
+      ],
+      "authentication": {
+        "type": "bearer",
+        "token": "Token"
+      },
+      "metaSortKey": -1710448757788,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_44497301ac5b4397ba6a7e47f27defbe",
+      "parentId": "fld_3621048fa95c4622a61a84288d46e5b5",
+      "modified": 1752556091739,
+      "created": 1752556091739,
+      "url": "{{host}}/management/api/v1.0/sandboxes('{{resourceGroupId}}')/resources('{{ermResourceId}}')/microsoft.substrate.ai.management.patchErmResource",
+      "name": "Create and Register SPN Key",
+      "description": "Create and Register SPN Key\n\nProvide the Web Parameters:  ```Resource Group Id```, ```Resource Id```.\n",
+      "method": "POST",
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n    \"patch\": {\n        \"@odata.type\": \"#microsoft.substrate.ai.management.createAndRegisterSpnKey\",\n        \"id\": \"da42c1e0-dd69-4137-9d40-ce13441d1918\",\n        \"spn\": {\n\t\t\t  \t\t\"patchDefinition\" : \"#microsoft.substrate.ai.management.createAndRegisterSpnKey\",\n            \"@odata.type\": \"#microsoft.substrate.ai.management.applicationServicePrincipal\",\n            \"name\": \"SPN Name\",\n            \"applicationObjectId\": \"SPN App Object ID (not App ID)\",\n            \"secretName\": \"Secret name to write\"\n        }\n    }\n}"
+      },
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json"
+        }
+      ],
+      "authentication": {
+        "type": "bearer",
+        "token": "Token"
+      },
+      "metaSortKey": -1710448757787,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_04be760b57fe4fca8e4475eb3a51a104",
+      "parentId": "fld_825a2944f8ad41fa9ce8673e1d277fb2",
+      "modified": 1752556091736,
+      "created": 1752556091736,
+      "url": "{{host}}/management/api/v1.0/sandboxes('{{resourceGroupId}}')/resources('{{ermResourceId}}')/microsoft.substrate.ai.management.patchErmResource",
+      "name": "Link ADF To Cosmos ADLS",
+      "description": "Link ADF To Cosmos ADLS\n\nProvide the Web Parameters:  ```Resource Group Id```, ```Resource Id```.\n",
+      "method": "POST",
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n    \"patch\": {\n        \"@odata.type\": \"#microsoft.substrate.ai.management.linkAdfToCosmosAdls\",\n        \"id\": \"da42c1e0-dd69-4137-9d40-ce13441d1928\",\n        \"storageName\": \"Storage Name (not URI)\",\n        \"linkedServiceName\": \"LS Name\",\n        \"spn\": {\n            \"@odata.type\": \"#microsoft.substrate.ai.management.applicationServicePrincipal\",\n            \"name\": \"SPN Name\",\n            \"applicationId\": \"SPN App ID\",\n            \"secretName\": \"Name of secret in EWS KV with the SPN App Key\"\n        }\n    }\n}"
+      },
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json"
+        }
+      ],
+      "authentication": {
+        "type": "bearer",
+        "token": "Token"
+      },
+      "metaSortKey": -1710448757784,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "fld_825a2944f8ad41fa9ce8673e1d277fb2",
+      "parentId": "fld_501bde2917174cc081f43ce8f106a438",
+      "modified": 1752556091734,
+      "created": 1752556091734,
+      "name": "ADF",
+      "description": "ADF",
+      "environment": {},
+      "environmentPropertyOrder": null,
+      "metaSortKey": -1710448757783,
+      "_type": "request_group"
+    },
+    {
+      "_id": "req_b702b5455d6a4620b448a9945d146dfa",
+      "parentId": "fld_912fc1b96b74452e912c4297399d5c01",
+      "modified": 1752556091732,
+      "created": 1752556091732,
+      "url": "{{host}}/management/api/v1.0/sandboxes('{{resourceGroupId}}')/resources('{{ermResourceId}}')",
+      "name": "Update VNET",
+      "description": "Update VNET\n\nProvide the Web Parameters:  ```Resource Group Id```, ```Resource Id```.\n",
+      "method": "PATCH",
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n    \"@odata.type\": \"#microsoft.substrate.ai.management.networkResource\",\n    \"completedSteps\": \"DeployNetwork\"\n}"
+      },
+      "parameters": [],
+      "headers": [],
+      "authentication": {
+        "type": "bearer",
+        "token": "Token"
+      },
+      "metaSortKey": -1710448757782,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "fld_912fc1b96b74452e912c4297399d5c01",
+      "parentId": "fld_501bde2917174cc081f43ce8f106a438",
+      "modified": 1752556091719,
+      "created": 1752556091719,
+      "name": "HDI",
+      "description": "HDI",
+      "environment": {},
+      "environmentPropertyOrder": null,
+      "metaSortKey": -1710448757770,
+      "_type": "request_group"
+    },
+    {
+      "_id": "req_4ace909078b6401db44ab886504ab0ea",
+      "parentId": "fld_912fc1b96b74452e912c4297399d5c01",
+      "modified": 1752556091731,
+      "created": 1752556091731,
+      "url": "{{host}}/management/api/v1.0/sandboxes('{{resourceGroupId}}')/resources('{{ermResourceId}}')/microsoft.substrate.ai.management.patchErmResource",
+      "name": "Link HDI to ADF",
+      "description": "Link HDI to ADF\n\nProvide the Web Parameters:  ```Resource Group Id```, ```Resource Id```.\n",
+      "method": "POST",
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n    \"patch\": {\n        \"@odata.type\": \"#microsoft.substrate.ai.management.linkHdiToAdf\", // Fixed\n        \"id\": \"{% uuid 'v4' %}\" // Random Guid\n    }\n}"
+      },
+      "parameters": [],
+      "headers": [],
+      "authentication": {
+        "type": "bearer",
+        "token": "Token"
+      },
+      "metaSortKey": -1710448757780,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_a40d60be94f04d888841594f85691250",
+      "parentId": "fld_912fc1b96b74452e912c4297399d5c01",
+      "modified": 1752556091730,
+      "created": 1752556091730,
+      "url": "{{host}}/management/api/v1.0/sandboxes('{{resourceGroupId}}')/resources('{{ermResourceId}}')/microsoft.substrate.ai.management.patchErmResource",
+      "name": "Change Settings",
+      "description": "Change Settings\n\nProvide the Web Parameters:  ```Resource Group Id```, ```Resource Id```.\n",
+      "method": "POST",
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n\t\"patch\":\n\t{\n\t\t\"@odata.type\": \"#microsoft.substrate.ai.management.hdiSettings\",\n        \"id\": \"{% uuid 'v4' %}\",\n\t\t\"settings\": \n\t\t\t[\n\t\t\t\t\"--CONFIG_TYPE\",\n\t\t\t\t\"KEY=VALUE\"\n\t\t\t]\n\t}\n}"
+      },
+      "parameters": [],
+      "headers": [],
+      "authentication": {
+        "type": "bearer",
+        "token": "Token"
+      },
+      "metaSortKey": -1710448757776,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_55991213b97f4fbf80574c3cc6048760",
+      "parentId": "fld_912fc1b96b74452e912c4297399d5c01",
+      "modified": 1752556091728,
+      "created": 1752556091728,
+      "url": "{{host}}/management/api/v1.0/sandboxes('{{resourceGroupId}}')/resources('{{ermResourceId}}')/microsoft.substrate.ai.management.patchErmResource",
+      "name": "Restart Node",
+      "description": "Restart Node\n\nProvide the Web Parameters:  ```Resource Group Id```, ```Resource Id```.\n",
+      "method": "POST",
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n\t\"patch\":\n\t{\n\t\t\"@odata.type\": \"#microsoft.substrate.ai.management.restartNode\",\n        \"id\": \"{% uuid 'v4' %}\",\n\t\t\"nodeNamePrefix\": \"gw1\"\n\t}\n}"
+      },
+      "parameters": [],
+      "headers": [],
+      "authentication": {
+        "type": "bearer",
+        "token": "Token"
+      },
+      "metaSortKey": -1710448757775,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_de83846a11c94f00bc916492cf16529f",
+      "parentId": "fld_912fc1b96b74452e912c4297399d5c01",
+      "modified": 1752556091727,
+      "created": 1752556091727,
+      "url": "{{host}}/management/api/v1.0/sandboxes('{{resourceGroupId}}')/resources('{{ermResourceId}}')/microsoft.substrate.ai.management.patchErmResource",
+      "name": "Install Package",
+      "description": "Install Package\n\nProvide the Web Parameters:  ```Resource Group Id```, ```Resource Id```.\n",
+      "method": "POST",
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n\t\"patch\":\n\t{\n\t\t\"@odata.type\": \"#microsoft.substrate.ai.management.package\",\n        \"id\": \"{% uuid 'v4' %}\",\n\t\t\"name\": \"SparkdotNet\",\n\t\t\"version\": \"0.10\"\n\t}\n}"
+      },
+      "parameters": [],
+      "headers": [],
+      "authentication": {
+        "type": "bearer",
+        "token": "Token"
+      },
+      "metaSortKey": -1710448757774,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_d135ba76b5c04b07bbacf5d41fe952fb",
+      "parentId": "fld_912fc1b96b74452e912c4297399d5c01",
+      "modified": 1752556091725,
+      "created": 1752556091725,
+      "url": "{{host}}/management/api/v1.0/sandboxes('{{resourceGroupId}}')/resources('{{ermResourceId}}')/microsoft.substrate.ai.management.patchErmResource",
+      "name": "Install Observability",
+      "description": "Install Observability\n\nProvide the Web Parameters:  ```Resource Group Id```, ```Resource Id```.\n",
+      "method": "POST",
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n\t\"patch\":\n\t{\n\t\t\"@odata.type\": \"#microsoft.substrate.ai.management.platformObservability\",\n        \"id\": \"{% uuid 'v4' %}\",\n        \"isForcedInstallation\": true\n\t}\n}"
+      },
+      "parameters": [],
+      "headers": [],
+      "authentication": {
+        "type": "bearer",
+        "token": "Token"
+      },
+      "metaSortKey": -1710448757773,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_81f04ae3a5714f17883247cc4020ddec",
+      "parentId": "fld_912fc1b96b74452e912c4297399d5c01",
+      "modified": 1752556091724,
+      "created": 1752556091724,
+      "url": "{{host}}/management/api/v1.0/sandboxes('{{resourceGroupId}}')/resources('{{ermResourceId}}')/microsoft.substrate.ai.management.patchErmResource",
+      "name": "Resize HDI Cluster (schedule based)",
+      "description": "Resize HDI Cluster (schedule based)\n\nProvide the Web Parameters:  ```Resource Group Id```, ```Resource Id```.\n",
+      "method": "POST",
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\r\n    \"patch\":\r\n    {\r\n        \"@odata.type\": \"#microsoft.substrate.ai.management.hdiSize\",\r\n        \"id\": \"{% uuid 'v4' %}\",\r\n        \"schedule\":\r\n        [\r\n            {\r\n                \"days\": [\"monday\", \"wednesday\"],\r\n                \"time\": \"21:00\",\r\n                \"instanceCount\": DESIRED_COUNT\r\n            },\r\n            {\r\n                \"days\": [\"Tuesday\"],\r\n                \"time\": \"10:00\",\r\n                \"instanceCount\": DESIRED_COUNT\r\n            }\r\n        ]\r\n    }\r\n}"
+      },
+      "parameters": [],
+      "headers": [],
+      "authentication": {
+        "type": "bearer",
+        "token": "Token"
+      },
+      "metaSortKey": -1710448757772,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_ba8175fe74ad4df3b72b7244cc0b0c4a",
+      "parentId": "fld_912fc1b96b74452e912c4297399d5c01",
+      "modified": 1752556091722,
+      "created": 1752556091722,
+      "url": "{{host}}/management/api/v1.0/sandboxes('{{resourceGroupId}}')/resources('{{ermResourceId}}')/microsoft.substrate.ai.management.patchErmResource",
+      "name": "Resize HDI Cluster",
+      "description": "Resize HDI Cluster\n\nProvide the Web Parameters:  ```Resource Group Id```, ```Resource Id```.\n",
+      "method": "POST",
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n\t\"patch\":\n\t{\n\t\t\"@odata.type\": \"#microsoft.substrate.ai.management.hdiSize\",\n        \"id\": \"{% uuid 'v4' %}\",\n\t\t\"minInstanceCount\": DESIRED_COUNT,\n        \"maxInstanceCount\": DESIRED_COUNT\n\t}\n}"
+      },
+      "parameters": [],
+      "headers": [],
+      "authentication": {
+        "type": "bearer",
+        "token": "Token"
+      },
+      "metaSortKey": -1710448757771,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_e066c8ebe41a40f9a3437b6672807502",
+      "parentId": "fld_d213ea5d89054cc28ce90e25b6ad7a3a",
+      "modified": 1752556531836,
+      "created": 1752556518967,
+      "url": "{{host}}/management/api/v1.0/sandboxes('{{resourceGroupId}}')/resources('{{ermResourceId}}')/microsoft.substrate.ai.management.removeStorageInfoFromRetentionPolicies",
+      "name": "remove Storage Info From Retention Policies",
+      "description": "remove Storage Info From Retention Policies\n\nProvide the Web Parameters:  ```Resource Group Id```, ```Resource Id```.\n",
+      "method": "POST",
+      "body": {},
+      "parameters": [],
+      "headers": [],
+      "authentication": {
+        "type": "bearer",
+        "token": "Token"
+      },
+      "metaSortKey": -1710448757925,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "fld_d213ea5d89054cc28ce90e25b6ad7a3a",
+      "parentId": "fld_bcdd6a457d384cbb8f6105502c8ebde3",
+      "modified": 1752556207186,
+      "created": 1710449756464,
+      "name": "Storage Actions",
+      "description": "Storage Actions",
+      "environment": {},
+      "environmentPropertyOrder": null,
+      "metaSortKey": -1752555623534,
+      "_type": "request_group"
+    },
+    {
+      "_id": "req_3a3f009f3648445b8062524b6692b5f9",
+      "parentId": "fld_d213ea5d89054cc28ce90e25b6ad7a3a",
+      "modified": 1752082091001,
+      "created": 1710449756479,
+      "url": "{{host}}/management/api/v1.0/sandboxes('{{resourceGroupId}}')/resources('{{ermResourceId}}')/microsoft.substrate.ai.management.upsertStorageInfoInRetentionPolicies",
+      "name": "Upsert Storage Info In Retention Policies",
+      "description": "Upsert Storage Info In Retention Policies\n\nProvide the Web Parameters:  ```Resource Group Id```, ```Resource Id```.\n",
+      "method": "POST",
+      "body": {},
+      "parameters": [],
+      "headers": [],
+      "authentication": {
+        "type": "bearer",
+        "token": "Token"
+      },
+      "metaSortKey": -1710448757825,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_5de8baa2e21046a9bfe2e8b385b6c1b3",
+      "parentId": "fld_d213ea5d89054cc28ce90e25b6ad7a3a",
+      "modified": 1752198937091,
+      "created": 1710449756474,
+      "url": "{{host}}/management/api/v1.0/sandboxes('{{resourceGroupId}}')/resources('{{ermResourceId}}')/microsoft.substrate.ai.management.removeStorageInfoFromMpc",
+      "name": "Remove Storage Info From Mpc",
+      "description": "Remove Storage Info From Mpc\n\nProvide the Web Parameters:  ```Resource Group Id```, ```Resource Id```.\n",
+      "method": "POST",
+      "body": {},
+      "parameters": [],
+      "headers": [],
+      "authentication": {
+        "type": "bearer",
+        "token": "Token"
+      },
+      "metaSortKey": -1710448757824,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_2e47db34c20c41f1b1752a9fb02fee11",
+      "parentId": "fld_d213ea5d89054cc28ce90e25b6ad7a3a",
+      "modified": 1752268140395,
+      "created": 1710449756469,
+      "url": "{{host}}/management/api/v1.0/sandboxes('{{resourceGroupId}}')/resources('{{ermResourceId}}')/microsoft.substrate.ai.management.upsertStorageInfoInMpc",
+      "name": "Upsert Storage Info In Mpc",
+      "description": "Upsert Storage Info In Mpc\n\nProvide the Web Parameters:  ```Resource Group Id```, ```Resource Id```.\n",
+      "method": "POST",
+      "body": {},
+      "parameters": [],
+      "headers": [],
+      "authentication": {
+        "type": "bearer",
+        "token": "Token"
+      },
+      "metaSortKey": -1710448757822,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_bf7e6882243541a6a97915e865651c72",
+      "parentId": "fld_8831a4d2627b46f095c5d119f9fb773d",
+      "modified": 1752554847318,
+      "created": 1752554790521,
+      "url": "{{host}}/management/api/v1.0/sandboxes('{{resourceGroupId}}')/resources",
+      "name": "Get All ERM Resources",
+      "description": "Get All ERM Resources\n\nProvide the Web Parameters:  ```Resource Group Id```.",
+      "method": "GET",
+      "body": {},
+      "parameters": [],
+      "headers": [
+        {
+          "name": "User-Agent",
+          "value": "insomnia/11.2.0"
+        }
+      ],
+      "authentication": {
+        "type": "bearer",
+        "token": "Token"
+      },
+      "metaSortKey": -1752554790521,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "fld_8831a4d2627b46f095c5d119f9fb773d",
+      "parentId": "fld_d64e6c5c93e5482fa2b9cd62739b58b1",
+      "modified": 1752556108931,
+      "created": 1752554534155,
+      "name": "Read-only Operations",
+      "description": "Read-only Operations",
+      "environment": {},
+      "environmentPropertyOrder": null,
+      "metaSortKey": -1710448758020,
+      "_type": "request_group"
+    },
+    {
+      "_id": "fld_493f59f3e7dd4a3d9ef5a1ad63751c7d",
+      "parentId": "fld_bcdd6a457d384cbb8f6105502c8ebde3",
+      "modified": 1752556031210,
+      "created": 1752556018895,
+      "name": "Common Resource Creation",
+      "description": "Common Resource Creation",
+      "environment": {},
+      "environmentPropertyOrder": null,
+      "metaSortKey": -1752555623509,
+      "_type": "request_group"
+    },
+    {
+      "_id": "req_10d6488643994867a8621c1c5708597d",
+      "parentId": "fld_8831a4d2627b46f095c5d119f9fb773d",
+      "modified": 1752555187186,
+      "created": 1752554944262,
+      "url": "{{host}}/management/api/v1.0/sandboxes('{{resourceGroupId}}')/resources('{{ermResourceId}}')/containerName('{{containerName}}')/microsoft.substrate.ai.getStorageContainerStats",
+      "name": "Get Storage Container Stats",
+      "description": "Get Storage Container Stats\n\nProvide the Web Parameters:  ```Resource Group Id```, ```Resource Id```, ```containerName```.\n",
+      "method": "GET",
+      "body": {},
+      "parameters": [],
+      "headers": [],
+      "authentication": {
+        "type": "bearer",
+        "token": "Token"
+      },
+      "metaSortKey": -1752554780943.25,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_600321f9273c42fb97ab0b72ff772e7f",
+      "parentId": "fld_8831a4d2627b46f095c5d119f9fb773d",
+      "modified": 1752554985991,
+      "created": 1752554906505,
+      "url": "{{host}}/management/api/v1.0/sandboxes('{{resourceGroupId}}')/resources('{{ermResourceId}}')/microsoft.substrate.ai.management.getRoleAssignments",
+      "name": "Get Role Assignments",
+      "description": "Get Role Assignments\n\nProvide the Web Parameters:  ```Resource Group Id```, ```Resource Id```.\n",
+      "method": "GET",
+      "body": {},
+      "parameters": [],
+      "headers": [],
+      "authentication": {
+        "type": "bearer",
+        "token": "Token"
+      },
+      "metaSortKey": -1752554771365.5,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_21a93ce6ef6143d195fd46e316727306",
+      "parentId": "fld_8831a4d2627b46f095c5d119f9fb773d",
+      "modified": 1752554874968,
+      "created": 1752554752210,
+      "url": "{{host}}/management/api/v1.0/sandboxes('{{resourceGroupId}}')/resources('{{ermResourceId}}')",
+      "name": "Get ERM Resource by Resource Id",
+      "description": "Get ERM Resource by Resource Id\n\nProvide the Web Parameters:  ```Resource Group Id```, ```Resource Id```.\n",
+      "method": "GET",
+      "body": {},
+      "parameters": [],
+      "headers": [
+        {
+          "name": "User-Agent",
+          "value": "insomnia/11.2.0"
+        }
+      ],
+      "authentication": {
+        "type": "bearer",
+        "token": "Token"
+      },
+      "metaSortKey": -1752554752210,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_320b0d159ec146ddafbdb00e5a17dd72",
+      "parentId": "fld_493f59f3e7dd4a3d9ef5a1ad63751c7d",
+      "modified": 1752556075722,
+      "created": 1752556018911,
+      "url": "{{host}}/management/api/v1.0/sandboxes('{{resourceGroupId}}')/resources('{{ermResourceId}}')",
+      "name": "Create Synapse BigData Pool",
+      "description": "Create Synapse BigData Pool\n\nProvide the Web Parameters:  ```Resource Group Id```, ```Resource Id```.\n",
+      "method": "PUT",
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\r\n    \"@odata.type\": \"#microsoft.substrate.ai.management.synapseBigDataPoolResource\", // Fixed\r\n    \"id\": \"{{ermResourceId}}\", // suggestion \"synapseBigDataPool0\"\r\n    \"resourceType\": \"synapseBigDataPool\", // Fixed\r\n    \"name\": \"sparkpool0\", // Name must contain only letters and numbers\r\n    \"synapseWorkspaceId\": \"synapseworkspace\", // Name of the existing Synapse Workspace on the Sandbox to which create this Big Data Pool\r\n    \"minNodeCount\": \"3\", // If a different value than \"maxNodeCount\", AutoScale will be enabled\r\n    \"maxNodeCount\": \"10\", // If a different value than \"minNodeCount\", AutoScale will be enabled\r\n    \"nodeSize\": \"small\", // Possible values are: \"small\", \"medium\", \"large\", \"xlarge\", \"xxlarge\", \"xxxlarg\"\r\n    \"sparkVersion\": \"spark2_4\" // Possible values are: \"spark2_4\", \"spark3_1\"\r\n}\r\n"
+      },
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json"
+        }
+      ],
+      "authentication": {
+        "type": "bearer",
+        "token": "Token"
+      },
+      "metaSortKey": -1710448757820,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_e71d33016e43412b94c207d67704df17",
+      "parentId": "fld_493f59f3e7dd4a3d9ef5a1ad63751c7d",
+      "modified": 1752556073085,
+      "created": 1752556018909,
+      "url": "{{host}}/management/api/v1.0/sandboxes('{{resourceGroupId}}')/resources('{{ermResourceId}}')",
+      "name": "Create Synapse Workspace",
+      "description": "Create Synapse Workspace\n\nProvide the Web Parameters:  ```Resource Group Id```, ```Resource Id```.\n",
+      "method": "PUT",
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\r\n    \"@odata.type\": \"#microsoft.substrate.ai.management.synapseWorkspaceResource\", // Fixed\r\n    \"id\": \"{{ermResourceId}}\", // Lowercase only - suggestion \"synapseworkspace\"\r\n    \"resourceType\": \"synapseWorkspace\", // Fixed\r\n    \"name\": \"swdckr43a6htt3m98\", // Less than 17 characters - suggestion \"sw\" + (random 15 characters)\r\n    \"sqlAdministratorLoginPasswordSecretName\": \"swdckr43a6htt3m98-SqlAdministratorLoginPasswordSecretName\", // suggestion (name) + \"-SqlAdministratorLoginPasswordSecretName\"\r\n    \"dataEncryptionKeyName\": \"swdckr43a6htt3m98-DataEncryptionKeyName\", // suggestion (name) + \"-DataEncryptionKeyName\"\r\n    \"managedResourceGroupName\": \"swdckr43a6htt3m98-ManagedResourceGroup\" // suggestion (name) + \"-ManagedResourceGroup\"\r\n}\r\n"
+      },
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json"
+        }
+      ],
+      "authentication": {
+        "type": "bearer",
+        "token": "Token"
+      },
+      "metaSortKey": -1710448757819,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_46f27ec74b314bdc9a26fd0578889434",
+      "parentId": "fld_493f59f3e7dd4a3d9ef5a1ad63751c7d",
+      "modified": 1752556070155,
+      "created": 1752556018906,
+      "url": "{{host}}/management/api/v1.0/sandboxes('{{resourceGroupId}}')/resources('{{ermResourceId}}')",
+      "name": "Create HDI",
+      "description": "Create HDI\n\nProvide the Web Parameters:  ```Resource Group Id```, ```Resource Id```.\n",
+      "method": "PUT",
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\r\n    \"@odata.type\": \"#microsoft.substrate.ai.management.hdiResource\",\r\n    \"id\": \"{{ermResourceId}}\",\r\n    \"resourceType\": \"hdi\",\r\n    \"minWorkerNodeCount\": 3,\r\n    \"maxWorkerNodeCount\": 3,\r\n    \"workerNodeSku\": \"Standard_D13_v2\",\r\n    \"headNodeSku\": \"Standard_D13_v2\",\r\n    \"hiveMetastoreSqlDbId\": null,\r\n    \"hiveMetastoreConnectionStringSecretName\": null,\r\n    \"hdiClusterVersion\": \"3.6\",\r\n    \"sparkVersion\": \"2.3\"\r\n}"
+      },
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json"
+        }
+      ],
+      "authentication": {
+        "type": "bearer",
+        "token": "Token"
+      },
+      "metaSortKey": -1710448757817,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_31703e8393244ff0a84b937edd13a224",
+      "parentId": "fld_493f59f3e7dd4a3d9ef5a1ad63751c7d",
+      "modified": 1752556064530,
+      "created": 1752556018905,
+      "url": "{{host}}/management/api/v1.0/sandboxes('{{resourceGroupId}}')/resources('{{ermResourceId}}')",
+      "name": "Create ADF",
+      "description": "Create ADF\n\nProvide the Web Parameters:  ```Resource Group Id```, ```Resource Id```.\n",
+      "method": "PUT",
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\r\n    \"@odata.type\": \"#microsoft.substrate.ai.management.adfResource\",\r\n    \"id\": \"{{ermResourceId}}\",\r\n    \"resourceType\": \"adf\"\r\n}"
+      },
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json"
+        }
+      ],
+      "authentication": {
+        "type": "bearer",
+        "token": "Token"
+      },
+      "metaSortKey": -1710448757816,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_ee84b641291443f681941b83da9f5765",
+      "parentId": "fld_493f59f3e7dd4a3d9ef5a1ad63751c7d",
+      "modified": 1752556018903,
+      "created": 1752556018903,
+      "url": "{{host}}/management/api/v1.0/sandboxes('{{resourceGroupId}}')/resources('{{ermResourceId}}')",
+      "name": "Create Blob Storage",
+      "description": "Create Blob Storage\n\nProvide the Web Parameters:  ```Resource Group Id```, ```Resource Id```.\n",
+      "method": "PUT",
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n    \"@odata.type\": \"#microsoft.substrate.ai.management.blobStorageResource\",\n    \"id\": \"blobStorage\",\n    \"resourceType\": \"blob\",\n    \"name\": \"mdcbblobstorage\",\n    \"dataManagement\": {\"platformDataCategory\": \"clCommercialCc\"},\n    \"storageRole\": \"dataPlane\"\n}"
+      },
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json"
+        }
+      ],
+      "authentication": {
+        "type": "bearer",
+        "token": "Token"
+      },
+      "metaSortKey": -1710448757814,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_6698750cee20483abe7971a868427ae3",
+      "parentId": "fld_493f59f3e7dd4a3d9ef5a1ad63751c7d",
+      "modified": 1752556060571,
+      "created": 1752556018902,
+      "url": "{{host}}/management/api/v1.0/sandboxes('{{resourceGroupId}}')/resources('{{ermResourceId}}')",
+      "name": "Create ADLS Gen 1",
+      "description": "Create ADLS Gen 1\n\nProvide the Web Parameters:  ```Resource Group Id```, ```Resource Id```.\n",
+      "method": "PUT",
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\r\n    \"@odata.type\": \"#microsoft.substrate.ai.management.adlsGen1Resource\",\r\n    \"id\": \"{{ermResourceId}}\",\r\n    \"resourceType\": \"adlsGen1\",\r\n    \"name\": \"newStorage\",\r\n    \"dataManagement\": {\"platformDataCategory\": \"clCommercialCc\"},\r\n    \"storageRole\": \"dataPlane\"\r\n}"
+      },
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json"
+        }
+      ],
+      "authentication": {
+        "type": "bearer",
+        "token": "Token"
+      },
+      "metaSortKey": -1710448757813,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_5c7fc43fc4544fa992417be8ddb8d96a",
+      "parentId": "fld_493f59f3e7dd4a3d9ef5a1ad63751c7d",
+      "modified": 1752556018901,
+      "created": 1752556018901,
+      "url": "{{host}}/management/api/v1.0/sandboxes('{{resourceGroupId}}')/resources('{{ermResourceId}}')",
+      "name": "Create ADLS Gen 2 Premium",
+      "description": "Create ADLS Gen 2 Premium\n\nProvide the Web Parameters:  ```Resource Group Id```, ```Resource Id```.\n",
+      "method": "PUT",
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\r\n    \"@odata.type\": \"#microsoft.substrate.ai.management.adlsGen2Resource\",\r\n    \"id\": \"{{ermResourceId}}\",\r\n    \"resourceType\": \"adlsGen2\",\r\n    \"name\": \"mystorage\",\r\n    \"dataManagement\": {\"platformDataCategory\": \"systemMetadata\"},\r\n    \"storageRole\": \"controlPlane, logsPlane\",\r\n    \"storageSkuName\": \"premiumlrs\",\r\n    \"kind\": \"pageBlobStorage\"\r\n}"
+      },
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json"
+        }
+      ],
+      "authentication": {
+        "type": "bearer",
+        "token": "Token"
+      },
+      "metaSortKey": -1710448757812,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_57316f1875ac4f29b7e0ff19d7bae04b",
+      "parentId": "fld_493f59f3e7dd4a3d9ef5a1ad63751c7d",
+      "modified": 1752556018899,
+      "created": 1752556018899,
+      "url": "{{host}}/management/api/v1.0/sandboxes('{{resourceGroupId}}')/resources('{{ermResourceId}}')",
+      "name": "Create ADLS Gen 2",
+      "description": "Create ADLS Gen 2\n\nProvide the Web Parameters:  ```Resource Group Id```, ```Resource Id```.\n",
+      "method": "PUT",
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n    \"@odata.type\": \"#microsoft.substrate.ai.management.adlsGen2Resource\",\n    \"id\": \"adlsGen2\",\n    \"resourceType\": \"adlsGen2\",\n    \"name\": \"mystorage\",\n    \"dataManagement\": {\"platformDataCategory\": \"systemMetadata\"},\n    \"storageRole\": \"controlPlane, logsPlane\"\n}"
+      },
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json"
+        }
+      ],
+      "authentication": {
+        "type": "bearer",
+        "token": "Token"
+      },
+      "metaSortKey": -1710448757810,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_1b0f8d3cc6c24e0989e773c856b2aae4",
+      "parentId": "fld_493f59f3e7dd4a3d9ef5a1ad63751c7d",
+      "modified": 1752556048372,
+      "created": 1752556018898,
+      "url": "{{host}}/management/api/v1.0/sandboxes('{{resourceGroupId}}')/resources('{{ermResourceId}}')",
+      "name": "Create KeyVault",
+      "description": "Create KeyVault\n\nProvide the Web Parameters:  ```Resource Group Id```, ```Resource Id```.\n",
+      "method": "PUT",
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\r\n    \"@odata.type\": \"#microsoft.substrate.ai.management.keyVaultResource\",\r\n    \"id\": \"{{ermResourceId}}\",\r\n    \"resourceType\": \"keyVault\",\r\n    \"name\": \"\"\r\n}"
+      },
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json"
+        }
+      ],
+      "authentication": {
+        "type": "bearer",
+        "token": "Token"
+      },
+      "metaSortKey": -1710448757809,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_2e0746336e4f4a51a3d91f8f33f670f2",
+      "parentId": "fld_483fa1ea9d374111b6b9940e8672c5ab",
+      "modified": 1752554193373,
+      "created": 1752554125885,
+      "url": "{{host}}/management/api/v1.0/sandboxes('{{resourceGroupId}}')/microsoft.substrate.ai.management.connectErmResources",
+      "name": "Connect ERM Resources",
+      "description": "Connect ERM Resources\n\nProvide the Web Parameters:  ```Resource Group Id```.",
+      "method": "POST",
+      "body": {},
+      "parameters": [],
+      "headers": [
+        {
+          "name": "User-Agent",
+          "value": "insomnia/11.2.0"
+        }
+      ],
+      "authentication": {
+        "type": "bearer",
+        "token": "Token"
+      },
+      "metaSortKey": -1752554125885,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "fld_483fa1ea9d374111b6b9940e8672c5ab",
+      "parentId": "fld_8ec11ca684124345897fdfdc309ad834",
+      "modified": 1752553369604,
+      "created": 1752553369604,
+      "name": "ERM",
+      "description": "ERM",
+      "environment": {},
+      "environmentPropertyOrder": null,
+      "metaSortKey": -1752553369604,
+      "_type": "request_group"
+    },
+    {
+      "_id": "fld_8ec11ca684124345897fdfdc309ad834",
+      "parentId": "fld_22b828c64aaa447b99f153f1c6ee8163",
+      "modified": 1752553237510,
+      "created": 1752553237510,
+      "name": "Change Operations - PROCEED WITH CAUTION",
+      "description": "Change Operations - PROCEED WITH CAUTION",
+      "environment": {},
+      "environmentPropertyOrder": null,
+      "metaSortKey": -1752553237510,
+      "_type": "request_group"
+    },
+    {
+      "_id": "fld_22b828c64aaa447b99f153f1c6ee8163",
+      "parentId": "fld_87a923049e184a688646903d44e7ef6a",
+      "modified": 1752553189929,
+      "created": 1752553189929,
+      "name": "Sandboxes",
+      "description": "Sandboxes",
+      "environment": {},
+      "environmentPropertyOrder": null,
+      "metaSortKey": -1752553189929,
+      "_type": "request_group"
+    },
+    {
+      "_id": "req_0f872405da88456abbf70e7bb52077a8",
+      "parentId": "fld_483fa1ea9d374111b6b9940e8672c5ab",
+      "modified": 1752554046690,
+      "created": 1752553992494,
+      "url": "{{host}}/management/api/v1.0/sandboxes('{{resourceGroupId}}')",
+      "name": "Patch ERM Sandbox",
+      "description": "Patch ERM Sandbox\n\nProvide the Web Parameters:  ```Resource Group Id```.\n",
+      "method": "PATCH",
+      "body": {
+        "mimeType": "application/json",
+        "text": " {\n            \"@odata.type\": \"#microsoft.substrate.ai.management.euclidSandbox\",\n            \"hdInsightClusterStatus\": \"failed\",\n            \"euclidDataFactoryName\": \"adfrtestadf\",\n            \"hdInsightConfiguration\": {\n                \"workerNode\": {\n                    \"nodeCount\": 10,\n                    \"sku\": \"Standard_D13_v2\"\n                },\n                \"headNode\": {\n                    \"nodeCount\": 2,\n                    \"sku\": \"Standard_D13_v2\"\n                }\n            }\n        }"
+      },
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json"
+        },
+        {
+          "name": "User-Agent",
+          "value": "insomnia/11.2.0"
+        }
+      ],
+      "authentication": {
+        "type": "bearer",
+        "token": "Token"
+      },
+      "metaSortKey": -1752553992494,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_7601a2473f6a4bd7aa5bb62581101637",
+      "parentId": "fld_483fa1ea9d374111b6b9940e8672c5ab",
+      "modified": 1752553962653,
+      "created": 1752553391412,
+      "url": "{{host}}/management/api/v1.0/sandboxes",
+      "name": "Create ERM Sandbox",
+      "description": "Create ERM Sandbox\n\n",
+      "method": "POST",
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n    \"@odata.type\": \"#microsoft.substrate.ai.management.euclidSandbox\",\n    \"id\": \"15b8210d-29fb-4b47-9f92-208740671a82\",\n    \"subscriptionId\": \"3db54861-01a1-4ab7-b439-6ab996a21284\",\n    \"euclidWorkspaceId\":  \"a41a20dc-3b92-4cd5-94bf-22458359780d\",\n    \"resourceGroupName\": \"IntegrationTesting001\",\n    \"officeRegion\": \"nam\",\n    \"azureRegion\": \"westus2\",\n    \"hdInsightName\": \"trialHDI-12346\",\n    \"controlPlaneStorageAccountName\": \"ctrlplanetrial123\",\n    \"dataPlaneStorageAccountName\": \"dataplanetrial123\",\n    \"storageType\": \"adlsg2\",\n    \"euclidWorkspaceVersion\": \"v\",\n    \"keyVaultName\": \"keyvaulttrial123\",\n    \"scenarioName\": \"demo\",\n    \"needsAetherConnectivity\": false,\n    \"enableGarbageCollection\": true,\n    \"hdInsightConfiguration\": {\n        \"hdiClusterVersion\": \"3.6\",\n        \"sparkVersion\": \"2.3\",\n        \"workerNode\": {\n            \"sku\": \"Standard_D14_v2\",\n            \"nodeCount\": \"3\"\n        },\n        \"headNode\": {\n            \"sku\": \"Standard_D13_v2\",\n            \"nodeCount\": \"2\"\n        }\n    },\n    \"hdInsightClusterSecurityGroup\": {\n        \"clusterUserGroupId\": \"1d466ee2-db10-4c40-a324-bfd13cfc0ae1\",\n        \"clusterUserGroupName\": \"SECURITYGROUP_PLACEHOLDER\"\n    },\n    \"partnerSshPrincipals\": [\n        \"SSHPrincipal1\",\n        \"SSHPrincipal2\"\n    ]\n}"
+      },
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json"
+        },
+        {
+          "name": "User-Agent",
+          "value": "insomnia/11.2.0"
+        }
+      ],
+      "authentication": {
+        "type": "bearer",
+        "token": "Token"
+      },
+      "metaSortKey": -1752553391412,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_3e0470e16e1f48c281de942dcf1563dc",
+      "parentId": "fld_06bac25310064b3f889957ac572d3b06",
+      "modified": 1752554332430,
+      "created": 1752554267142,
+      "url": "{{host}}/management/api/v1.0/sandboxes('{{resourceGroupId}}')/microsoft.substrate.ai.management.getAdlsGen2FilesAndDirectories",
+      "name": "[ADLS Gen2] Get Sandbox ADLS files and directories",
+      "description": "[ADLS Gen2] Get Sandbox ADLS files and directories\n\nProvide the Web Parameters:  ```Resource Group Id```.\n",
+      "method": "POST",
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n    \"fileSystemName\":\"requirements.yml\",\n    \"storagePath\": \"/\"\n}"
+      },
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json"
+        },
+        {
+          "name": "User-Agent",
+          "value": "insomnia/11.2.0"
+        }
+      ],
+      "authentication": {
+        "type": "bearer",
+        "token": "Token"
+      },
+      "metaSortKey": -1752554267142,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "fld_06bac25310064b3f889957ac572d3b06",
+      "parentId": "fld_22b828c64aaa447b99f153f1c6ee8163",
+      "modified": 1752553215522,
+      "created": 1752553215522,
+      "name": "Read-only Operations",
+      "description": "Read-only Operations",
+      "environment": {},
+      "environmentPropertyOrder": null,
+      "metaSortKey": -1752553215522,
+      "_type": "request_group"
+    },
+    {
+      "_id": "req_b21cb5cd639d489ea58fcaa7c808ebe6",
+      "parentId": "fld_06bac25310064b3f889957ac572d3b06",
+      "modified": 1752553828079,
+      "created": 1752553766987,
+      "url": "{{host}}/management/api/v1.0/sandboxes('{{resourceGroupId}}')",
+      "name": "Get Sandbox by Resource Group Name",
+      "description": "Get Sandbox by Resource Group Name\n\nProvide the Web Parameters:  ```Resource Group Id```.",
+      "method": "GET",
+      "body": {},
+      "parameters": [],
+      "headers": [
+        {
+          "name": "User-Agent",
+          "value": "insomnia/11.2.0"
+        }
+      ],
+      "authentication": {
+        "type": "bearer",
+        "token": "Token"
+      },
+      "metaSortKey": -1752553766987,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_ba0e6c8939e741109c23cb031b73501d",
+      "parentId": "fld_06bac25310064b3f889957ac572d3b06",
+      "modified": 1752553639307,
+      "created": 1752553483548,
+      "url": "{{host}}/management/api/v1.0/sandboxes/",
+      "name": "Get Sandboxes by Euclid Workspace Id",
+      "description": "Get Sandboxes by Euclid Workspace Id\n\n",
+      "method": "GET",
+      "body": {},
+      "parameters": [
+        {
+          "name": "$filter",
+          "value": "workspaceId eq {{euclidWorkspaceId}}",
+          "disabled": false,
+          "id": "pair_fe8584f712114c9eba765b8253d1743f"
+        }
+      ],
+      "headers": [
+        {
+          "name": "User-Agent",
+          "value": "insomnia/11.2.0"
+        }
+      ],
+      "authentication": {
+        "type": "bearer",
+        "token": "Token"
+      },
+      "metaSortKey": -1752553483548,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_692f2604fcde4d96a06a7f83b5e57005",
+      "parentId": "fld_dc20f2f1ac82418e8fa8812c2f9461c2",
+      "modified": 1752552340698,
+      "created": 1752552301567,
+      "url": "{{host}}/management/api/v1.0/euclidWorkspaces('{{euclidWorkspaceId}}')/microsoft.substrate.ai.management.getEwsDefinition",
+      "name": "Get EWS Definition",
+      "description": "Get EWS Definition\n\nProvide the Web Parameters:  ```euclidWorkspaceId```.\n",
+      "method": "GET",
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n    \"requestors\": [\n        \"PartnerAdminEmail@microsoft.com\"\n    ]\n}"
+      },
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json"
+        },
+        {
+          "name": "User-Agent",
+          "value": "insomnia/11.2.0"
+        }
+      ],
+      "authentication": {
+        "type": "bearer",
+        "token": "Token"
+      },
+      "metaSortKey": -1752552301567,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "fld_dc20f2f1ac82418e8fa8812c2f9461c2",
+      "parentId": "fld_cddd67d461f04d348ab47fe7dba9e48c",
+      "modified": 1752550831528,
+      "created": 1752550831528,
+      "name": "Read-only Operations",
+      "description": "Read-only Operations",
+      "environment": {},
+      "environmentPropertyOrder": null,
+      "metaSortKey": -1752550831528,
+      "_type": "request_group"
+    },
+    {
+      "_id": "fld_cddd67d461f04d348ab47fe7dba9e48c",
+      "parentId": "fld_87a923049e184a688646903d44e7ef6a",
+      "modified": 1752550568193,
+      "created": 1752550568193,
+      "name": "Euclid Workspaces",
+      "description": "Euclid Workspaces",
+      "environment": {},
+      "environmentPropertyOrder": null,
+      "metaSortKey": -1752550568193,
+      "_type": "request_group"
+    },
+    {
+      "_id": "req_390e55c8165f49259e3eaba1c8b396a0",
+      "parentId": "fld_dc20f2f1ac82418e8fa8812c2f9461c2",
+      "modified": 1752552291186,
+      "created": 1752552234761,
+      "url": "{{host}}/management/api/v1.0/euclidWorkspaces('{{euclidWorkspaceId}}')/microsoft.substrate.ai.management.getEWSApprovalTemplates",
+      "name": "Get EWS Approval Templates",
+      "description": "Get EWS Approval Templates\n\nProvide the Web Parameters:  ```euclidWorkspaceId```.\n",
+      "method": "POST",
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n    \"requestors\": [\n        \"PartnerAdminEmail@microsoft.com\"\n    ]\n}"
+      },
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json"
+        },
+        {
+          "name": "User-Agent",
+          "value": "insomnia/11.2.0"
+        }
+      ],
+      "authentication": {
+        "type": "bearer",
+        "token": "Token"
+      },
+      "metaSortKey": -1752552234761,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_959a90eda7c144ffa57ac97dc0bbe9b2",
+      "parentId": "fld_dc20f2f1ac82418e8fa8812c2f9461c2",
+      "modified": 1752552051079,
+      "created": 1752552014752,
+      "url": "{{host}}/management/api/v1.0/euclidWorkspaces('{{euclidWorkspaceId}}')/microsoft.substrate.ai.management.getMarsPartnerConfiguration",
+      "name": "Get Mars Partner Configuration",
+      "description": "Get Mars Partner Configuration\n\nProvide the Web Parameters:  ```euclidWorkspaceId```.",
+      "method": "GET",
+      "body": {},
+      "parameters": [],
+      "headers": [
+        {
+          "name": "User-Agent",
+          "value": "insomnia/11.2.0"
+        }
+      ],
+      "authentication": {
+        "type": "bearer",
+        "token": "Token"
+      },
+      "metaSortKey": -1752552014752,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_93c59a69ed614004b9985da30c6c9aed",
+      "parentId": "fld_dc20f2f1ac82418e8fa8812c2f9461c2",
+      "modified": 1752551380821,
+      "created": 1752551222953,
+      "url": "{{host}}/management/api/v1.0/euclidWorkspaces",
+      "name": "All Euclid Workspaces",
+      "description": "All Euclid Workspaces\n\n",
+      "method": "GET",
+      "body": {},
+      "parameters": [
+        {
+          "name": "$type",
+          "value": "euclid",
+          "disabled": false,
+          "id": "pair_d29675d4a1c748f2bbac7ca6245c4ab8"
+        }
+      ],
+      "headers": [
+        {
+          "name": "User-Agent",
+          "value": "insomnia/11.2.0"
+        }
+      ],
+      "authentication": {
+        "type": "bearer",
+        "token": "Token"
+      },
+      "metaSortKey": -1752551222953,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_10acc15168cd43d3ba23e41b4e902b40",
+      "parentId": "fld_dc20f2f1ac82418e8fa8812c2f9461c2",
+      "modified": 1752551003969,
+      "created": 1752550847466,
+      "url": "{{host}}/management/api/v1.0/euclidWorkspaces('{{euclidWorkspaceId}}')",
+      "name": "Get Euclid Workspace by Workspace Id",
+      "description": "Get Euclid Workspace by Workspace Id\n\nProvide the Web Parameters:  ```euclidWorkspaceId```.",
+      "method": "GET",
+      "body": {},
+      "parameters": [],
+      "headers": [
+        {
+          "name": "User-Agent",
+          "value": "insomnia/11.2.0"
+        }
+      ],
+      "authentication": {
+        "type": "bearer",
+        "token": "Token"
+      },
+      "metaSortKey": -1752550847466,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_ac9ae9bf1aab4977962e17e7bd6f0471",
+      "parentId": "fld_9e75424e7e1d4996bd0defd9e4055374",
+      "modified": 1752553066960,
+      "created": 1752553008881,
+      "url": "{{host}}/management/api/v1.0/euclidWorkspaces('{{euclidWorkspaceId}}')/microsoft.substrate.ai.management.createUserManagedIdentity",
+      "name": "Create User Managed Identity",
+      "description": "Create User Managed Identity\n\nProvide the Web Parameters:  ```euclidWorkspaceId```.\n",
+      "method": "POST",
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n\t\"tenantId\":\"cdc5aeea-15c5-4db6-b079-fcadd2505dc2\",\n\t\"subscriptionId\":\"c3a8138a-42c1-47e9-8577-dd9bca08da46\",\n\t\"resourceGroupName\":\"o365ccspartansdevnam\",\n\t\"azureRegion\":\"eastus2\",\n\t\"userManagedIdentityName\":\"test\"\n}"
+      },
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json"
+        },
+        {
+          "name": "User-Agent",
+          "value": "insomnia/11.2.0"
+        }
+      ],
+      "authentication": {
+        "type": "bearer",
+        "token": "Token"
+      },
+      "metaSortKey": -1752553008881,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "fld_9e75424e7e1d4996bd0defd9e4055374",
+      "parentId": "fld_cddd67d461f04d348ab47fe7dba9e48c",
+      "modified": 1752550819091,
+      "created": 1752550819091,
+      "name": "Change Operations - PROCEED WITH CAUTION",
+      "description": "Change Operations - PROCEED WITH CAUTION",
+      "environment": {},
+      "environmentPropertyOrder": null,
+      "metaSortKey": -1752550819091,
+      "_type": "request_group"
+    },
+    {
+      "_id": "req_fb4ba8c1ab1a474eba3e1b88f21297f5",
+      "parentId": "fld_9e75424e7e1d4996bd0defd9e4055374",
+      "modified": 1752552912367,
+      "created": 1752552869569,
+      "url": "{{host}}/management/api/v1.0/euclidWorkspaces('{{euclidWorkspaceId}}')",
+      "name": "Patch an Euclid Workspace",
+      "description": "Patch an Euclid Workspace\n\nProvide the Web Parameters:  ```euclidWorkspaceId```.\n",
+      "method": "PATCH",
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n\t\"workspaceSpnName\": \"o365ccapp-spartans-workspace-dev\"\n}"
+      },
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json"
+        },
+        {
+          "name": "User-Agent",
+          "value": "insomnia/11.2.0"
+        }
+      ],
+      "authentication": {
+        "type": "bearer",
+        "token": "Token"
+      },
+      "metaSortKey": -1752552869569,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_f778fe58fd4c40d4a854005285ad811a",
+      "parentId": "fld_9e75424e7e1d4996bd0defd9e4055374",
+      "modified": 1752552844956,
+      "created": 1752552704028,
+      "url": "{{host}}/management/api/v1.0/euclidWorkspaces('{{euclidWorkspaceId}}')/microsoft.substrate.ai.management.triggerEwsDefinitionPr",
+      "name": "Create Euclid Workspace Definition PR",
+      "description": "Create Euclid Workspace Definition PR\n\nProvide the Web Parameters:  ```euclidWorkspaceId```.",
+      "method": "POST",
+      "body": {},
+      "parameters": [],
+      "headers": [
+        {
+          "name": "User-Agent",
+          "value": "insomnia/11.2.0"
+        }
+      ],
+      "authentication": {
+        "type": "bearer",
+        "token": "Token"
+      },
+      "metaSortKey": -1752552704028,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_fad1f1cdcac4459f92a63ec1b6e5f974",
+      "parentId": "fld_9e75424e7e1d4996bd0defd9e4055374",
+      "modified": 1752552146385,
+      "created": 1752552084323,
+      "url": "{{host}}/management/api/v1.0/euclidWorkspaces('{{euclidWorkspaceId}}')/microsoft.substrate.ai.management.upsertMarsPartnerConfiguration",
+      "name": "Upsert Mars Partner Configuration",
+      "description": "Upsert Mars Partner Configuration\n\nProvide the Web Parameters:  ```euclidWorkspaceId```.",
+      "method": "POST",
+      "body": {},
+      "parameters": [],
+      "headers": [
+        {
+          "name": "User-Agent",
+          "value": "insomnia/11.2.0"
+        }
+      ],
+      "authentication": {
+        "type": "bearer",
+        "token": "Token"
+      },
+      "metaSortKey": -1752552084323,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_db170ac0ae6b44a084da267af566a0ec",
+      "parentId": "fld_9e75424e7e1d4996bd0defd9e4055374",
+      "modified": 1752551641499,
+      "created": 1752551559882,
+      "url": "{{host}}/management/api/v1.0/euclidWorkspaces('{{euclidWorkspaceId}}')/microsoft.substrate.ai.management.updateMembers",
+      "name": "Update Euclid Workspace Members",
+      "description": "Update Euclid Workspace Members\n\nProvide the Web Parameters:  ```euclidWorkspaceId```.\n",
+      "method": "POST",
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n    \"operation\": \"add\",\n    \"members\": [\n        {\n     \"aadObjectId\": \"535ca2ba-3465-4baf-907b-27b5ba59c807\",\n     \"aadTenantId\": \"cdc5aeea-15c5-4db6-b079-fcadd2505dc2\",\n     \"type\": \"user\",\n     \"actions\": [\n      \"erm/sandboxes/read\",\n      \"erm/sandboxes/create\",\n      \"erm/sandboxes/delete\",\n      \"erm/resources/create\",\n      \"erm/resources/update\",\n      \"erm/resources/delete\",\n      \"erm/patches/installCertificateInHDI\",\n      \"erm/patches/hdiSettings\",\n      \"erm/patches/setScrubber\",\n      \"erm/patches/observability\",\n      \"erm/patches/addFirewallException\",\n      \"erm/patches/restartNode\",\n      \"erm/patches/restartService\"\n     ]\n    }\n    ]\n}"
+      },
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json"
+        },
+        {
+          "name": "User-Agent",
+          "value": "insomnia/11.2.0"
+        }
+      ],
+      "authentication": {
+        "type": "bearer",
+        "token": "Token"
+      },
+      "metaSortKey": -1752551559882,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_099a7949541f49c2aacd132645f75f01",
+      "parentId": "fld_9e75424e7e1d4996bd0defd9e4055374",
+      "modified": 1752551179739,
+      "created": 1752551058718,
+      "url": "{{host}}/management/api/v1.0/euclidWorkspaces",
+      "name": "Create an Euclid Workspace",
+      "description": "Create an Euclid Workspace\n\n",
+      "method": "POST",
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n    \"id\": \"9c1a7f4e-2b3d-4a6e-9f1b-7e2c8d5f1a7c\",\n    \"projectId\": \"{% uuid 'v4' %}\",\n    \"projectName\": \"projectName_Placeholder\",\n    \"ring\": \"ppe\",\n    \"members\": [\n        {\n            \"aadObjectId\": \"e741b989-98f6-4f33-a424-5f6b9687e9fa\", \n            \"aadTenantId\": \"72f988bf-86f1-41af-91ab-2d7cd011db47\",\n            \"type\": \"group\",\n            \"actions\": [\n                \"erm/sandboxes/read\",\n                \"erm/sandboxes/create\",\n                \"erm/hdi/create\",\n                \"erm/hdi/delete\",\n                \"erm/resource/update\"\n            ]\n        }\n    ],\n    \"observabilityConfiguration\": {\n        \"mdm\": \"MDM_Placeholder\",\n        \"genevaNamespace\": \"GenevaNamespace_Placeholder\",\n        \"mdsAccount\": \"mdsAccount_Placeholder\",\n        \"projectIdentifier\": \"projectIdentifier_Placeholder\",\n        \"serviceTreeId\": \"c622ecfe-dc3a-48cd-aa5c-c6882fedd0a5\",\n        \"genevaSecurityGroup\": \"PLACEHOLDER\",\n        \"icmOwnerTeam\": \"ICM TEAM NAME\"\n    },\n    \"torusTeam\"\t\t\t\t: \"TestTeam\",\n    \"workspaceSpnName\": \"spn_name\"\n}"
+      },
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json"
+        },
+        {
+          "name": "User-Agent",
+          "value": "insomnia/11.2.0"
+        }
+      ],
+      "authentication": {
+        "type": "bearer",
+        "token": "Token"
+      },
+      "metaSortKey": -1752551058718,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_c8bae1d524c64bb2b8accdbb160657ca",
+      "parentId": "fld_7d7d15c776d1407fa0e1963f53fecd8d",
+      "modified": 1752552207441,
+      "created": 1752552169352,
+      "url": "{{host}}/management/api/v1.0/euclidWorkspaces('{{euclidWorkspaceId}}')/microsoft.substrate.ai.management.deleteMarsPartnerConfiguration",
+      "name": "Delete Mars Partner Configuration",
+      "description": "Delete Mars Partner Configuration\n\nProvide the Web Parameters:  ```euclidWorkspaceId```.",
+      "method": "POST",
+      "body": {},
+      "parameters": [],
+      "headers": [
+        {
+          "name": "User-Agent",
+          "value": "insomnia/11.2.0"
+        }
+      ],
+      "authentication": {
+        "type": "bearer",
+        "token": "Token"
+      },
+      "metaSortKey": -1752552169352,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "fld_7d7d15c776d1407fa0e1963f53fecd8d",
+      "parentId": "fld_cddd67d461f04d348ab47fe7dba9e48c",
+      "modified": 1752550801994,
+      "created": 1752550801994,
+      "name": "Destructive Operations - PROCEED WITH EXTREME CAUTION",
+      "description": "Destructive Operations - PROCEED WITH EXTREME CAUTION",
+      "environment": {},
+      "environmentPropertyOrder": null,
+      "metaSortKey": -1752550801994,
+      "_type": "request_group"
+    },
+    {
+      "_id": "req_205c74844b794bfdada34de81b0a3e5c",
+      "parentId": "fld_7d7d15c776d1407fa0e1963f53fecd8d",
+      "modified": 1752551940339,
+      "created": 1752551675842,
+      "url": "{{host}}/management/api/v1.0/euclidWorkspaces('{{euclidWorkspaceId}}')/microsoft.substrate.ai.management.recreateEuclidWorkspaceWithCorrectId",
+      "name": "Recreate Euclid Workspace With Correct Id",
+      "description": "Recreate Euclid Workspace With Correct Id\n\nProvide the Web Parameters:  ```euclidWorkspaceId```.",
+      "method": "POST",
+      "body": {},
+      "parameters": [],
+      "headers": [
+        {
+          "name": "User-Agent",
+          "value": "insomnia/11.2.0"
+        }
+      ],
+      "authentication": {
+        "type": "bearer",
+        "token": "Token"
+      },
+      "metaSortKey": -1752551675842,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_5120b64cb7d34995ba25699565e1a2d3",
+      "parentId": "fld_7d7d15c776d1407fa0e1963f53fecd8d",
+      "modified": 1752551531489,
+      "created": 1752551472477,
+      "url": "{{host}}/management/api/v1.0/euclidWorkspaces('{{euclidWorkspaceId}}')",
+      "name": "Delete an Euclid Workspace",
+      "description": "Delete an Euclid Workspace\n\nProvide the Web Parameters:  ```euclidWorkspaceId```.",
+      "method": "DELETE",
+      "body": {},
+      "parameters": [],
+      "headers": [
+        {
+          "name": "User-Agent",
+          "value": "insomnia/11.2.0"
+        }
+      ],
+      "authentication": {
+        "type": "bearer",
+        "token": "Token"
+      },
+      "metaSortKey": -1752551472477,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "env_ecced1e6846045e69a033f07fc5194fb",
+      "parentId": "wrk_b2201eda0fb44f889b9700d8f0098cfb",
+      "modified": 1753301657017,
+      "created": 1739997490228,
+      "name": "Base Environment",
+      "data": {},
+      "dataPropertyOrder": {},
+      "color": null,
+      "isPrivate": false,
+      "metaSortKey": 0,
+      "_type": "environment",
+      "description": "Base Environment"
+    },
+    {
+      "_id": "jar_8bff58cde8d04c9282a3c0c043f1074e",
+      "parentId": "wrk_b2201eda0fb44f889b9700d8f0098cfb",
+      "modified": 1739997490337,
+      "created": 1739997490337,
+      "name": "Default Jar",
+      "cookies": [],
+      "_type": "cookie_jar",
+      "description": "Default Jar"
+    },
+    {
+      "_id": "spc_49a528eae3a94a0ba23984e0da0d12df",
+      "parentId": "wrk_b2201eda0fb44f889b9700d8f0098cfb",
+      "modified": 1753300828089,
+      "created": 1753300828089,
+      "fileName": "ERM",
+      "contents": "",
+      "contentType": "yaml",
+      "_type": "api_spec",
+      "description": "No description"
+    },
+    {
+      "_id": "env_2638fdc4313c48c1911960081cc4ab7a",
+      "parentId": "env_ecced1e6846045e69a033f07fc5194fb",
+      "modified": 1753301510862,
+      "created": 1710449754434,
+      "name": "MARS PROD",
+      "data": {
+        "environment": "PROD",
+        "host": "https://substrateai.microsoft.net",
+        "datasetId": "00000000-0000-0000-0000-000000000000",
+        "newDatasetId": "00000000-0000-0000-0000-000000000000",
+        "newWorkspaceId": "00000000-0000-0000-0000-000000000000",
+        "euclidWorkspaceId": "{{euclidWorkspaceId}}",
+        "workspaceId": "f36a55b6-bc98-48f2-86d4-a411c4448b2a",
+        "serviceAccount2UserId": "e244bda7-3854-4e1c-8cf0-85c43520298c",
+        "sandboxId": "1e491112-8ba0-420e-9834-169d9cae46d6",
+        "extractionId": "00000000-0000-0000-0000-000000000000",
+        "newExtractionId": "00000000-0000-0000-0000-000000000000",
+        "serviceAccount1": "heron1@microsoft.com",
+        "serviceAccount2": "heron2@microsoft.com",
+        "expirationInDays": "14",
+        "runMyDataHdiPostman": "true",
+        "runSoftCreateAdfPostman": "false",
+        "extractionType": "",
+        "testRunnerHdiIds": "[]",
+        "deployHdiSandboxId": "",
+        "resourceGroupId": "{{resourceGroupId}}",
+        "resourceGroupName": "{{resourceGroupName}}",
+        "ermResourceId": "{{resourceId}}",
+        "patchId": "{patchId}",
+        "ermResourceName": "{{ermResourceName}}",
+        "newProjectId": "00000000-0000-0000-0000-000000000000",
+        "projectId": "00000000-0000-0000-0000-000000000000",
+        "sandboxShareRequestId": "",
+        "aadMicrosoftHeronAppResourceId": "939526d2-506a-4bd2-888d-233272aac963",
+        "aadMicrosoftHeronAppClientId": "ea5bdc6e-9b7a-495f-aafb-b319741e7dd7",
+        "aadMicrosoftHeronAppRedirectUrl": "urn:ietf:wg:oauth:2.0:oob",
+        "aadMicrosoftHeronAppScope": "{{ _.aadTorusHeronAppResourceId }}/user_impersonation",
+        "aadTorusHeronAppResourceId": "3e9313d0-debc-4f0d-85a7-171f92333ba1",
+        "aadTorusHeronAppClientId": "db0c12af-ad38-4526-84ba-cb77436e3b92",
+        "aadTorusHeronAppRedirectUrl": "urn:ietf:wg:oauth:2.0:oob",
+        "aadTorusHeronAppScope": "{{aadTorusHeronAppResourceId}}/user_impersonation"
+      },
+      "dataPropertyOrder": {
+        "&": [
+          "environment",
+          "host",
+          "datasetId",
+          "newDatasetId",
+          "newWorkspaceId",
+          "euclidWorkspaceId",
+          "workspaceId",
+          "serviceAccount2UserId",
+          "sandboxId",
+          "extractionId",
+          "newExtractionId",
+          "serviceAccount1",
+          "serviceAccount2",
+          "expirationInDays",
+          "runMyDataHdiPostman",
+          "runSoftCreateAdfPostman",
+          "extractionType",
+          "testRunnerHdiIds",
+          "deployHdiSandboxId",
+          "resourceGroupId",
+          "resourceGroupName",
+          "ermResourceId",
+          "ermResourceName",
+          "patchId",
+          "newProjectId",
+          "projectId",
+          "sandboxShareRequestId",
+          "aadMicrosoftHeronAppResourceId",
+          "aadMicrosoftHeronAppClientId",
+          "aadMicrosoftHeronAppRedirectUrl",
+          "aadMicrosoftHeronAppScope",
+          "aadTorusHeronAppResourceId",
+          "aadTorusHeronAppClientId",
+          "aadTorusHeronAppRedirectUrl",
+          "aadTorusHeronAppScope"
+        ]
+      },
+      "color": "#f10909",
+      "isPrivate": false,
+      "metaSortKey": 9,
+      "_type": "environment",
+      "description": "MARS PROD"
+    },
+    {
+      "_id": "env_a012d00af7b34c8c954f2e633488a94a",
+      "parentId": "env_ecced1e6846045e69a033f07fc5194fb",
+      "modified": 1753301510863,
+      "created": 1710449754434,
+      "name": "COSMIC PROD",
+      "data": {
+        "environment": "PROD",
+        "host": "https://webapi.srm.microsoft.net",
+        "datasetId": "00000000-0000-0000-0000-000000000000",
+        "newDatasetId": "00000000-0000-0000-0000-000000000000",
+        "newWorkspaceId": "00000000-0000-0000-0000-000000000000",
+        "euclidWorkspaceId": "{{euclidWorkspaceId}}",
+        "workspaceId": "f36a55b6-bc98-48f2-86d4-a411c4448b2a",
+        "serviceAccount2UserId": "e244bda7-3854-4e1c-8cf0-85c43520298c",
+        "sandboxId": "1e491112-8ba0-420e-9834-169d9cae46d6",
+        "extractionId": "00000000-0000-0000-0000-000000000000",
+        "newExtractionId": "00000000-0000-0000-0000-000000000000",
+        "serviceAccount1": "heron1@microsoft.com",
+        "serviceAccount2": "heron2@microsoft.com",
+        "expirationInDays": "14",
+        "runMyDataHdiPostman": "true",
+        "runSoftCreateAdfPostman": "false",
+        "extractionType": "",
+        "testRunnerHdiIds": "[]",
+        "deployHdiSandboxId": "",
+        "resourceGroupId": "{{resourceGroupId}}",
+        "resourceGroupName": "{{resourceGroupName}}",
+        "ermResourceId": "{{resourceId}}",
+        "patchId": "{patchId}",
+        "ermResourceName": "{{ermResourceName}}",
+        "newProjectId": "00000000-0000-0000-0000-000000000000",
+        "projectId": "00000000-0000-0000-0000-000000000000",
+        "sandboxShareRequestId": "",
+        "aadMicrosoftHeronAppResourceId": "939526d2-506a-4bd2-888d-233272aac963",
+        "aadMicrosoftHeronAppClientId": "ea5bdc6e-9b7a-495f-aafb-b319741e7dd7",
+        "aadMicrosoftHeronAppRedirectUrl": "urn:ietf:wg:oauth:2.0:oob",
+        "aadMicrosoftHeronAppScope": "{{ _.aadTorusHeronAppResourceId }}/user_impersonation",
+        "aadTorusHeronAppResourceId": "3e9313d0-debc-4f0d-85a7-171f92333ba1",
+        "aadTorusHeronAppClientId": "db0c12af-ad38-4526-84ba-cb77436e3b92",
+        "aadTorusHeronAppRedirectUrl": "urn:ietf:wg:oauth:2.0:oob",
+        "aadTorusHeronAppScope": "{{aadTorusHeronAppResourceId}}/user_impersonation"
+      },
+      "dataPropertyOrder": {
+        "&": [
+          "environment",
+          "host",
+          "datasetId",
+          "newDatasetId",
+          "newWorkspaceId",
+          "euclidWorkspaceId",
+          "workspaceId",
+          "serviceAccount2UserId",
+          "sandboxId",
+          "extractionId",
+          "newExtractionId",
+          "serviceAccount1",
+          "serviceAccount2",
+          "expirationInDays",
+          "runMyDataHdiPostman",
+          "runSoftCreateAdfPostman",
+          "extractionType",
+          "testRunnerHdiIds",
+          "deployHdiSandboxId",
+          "resourceGroupId",
+          "resourceGroupName",
+          "patchId",
+          "ermResourceId",
+          "ermResourceName",
+          "newProjectId",
+          "projectId",
+          "sandboxShareRequestId",
+          "aadMicrosoftHeronAppResourceId",
+          "aadMicrosoftHeronAppClientId",
+          "aadMicrosoftHeronAppRedirectUrl",
+          "aadMicrosoftHeronAppScope",
+          "aadTorusHeronAppResourceId",
+          "aadTorusHeronAppClientId",
+          "aadTorusHeronAppRedirectUrl",
+          "aadTorusHeronAppScope"
+        ]
+      },
+      "color": "#f10909",
+      "isPrivate": false,
+      "metaSortKey": 17,
+      "_type": "environment",
+      "description": "COSMIC PROD"
+    },
+    {
+      "_id": "env_b000b43a9600475fb65e5f9d7e359aa4",
+      "parentId": "env_ecced1e6846045e69a033f07fc5194fb",
+      "modified": 1753301615653,
+      "created": 1710449754440,
+      "name": "Local",
+      "data": {
+        "environment": "DEV",
+        "host": "https://localhost:443",
+        "datasetId": "00000000-0000-0000-0000-000000000000",
+        "newDatasetId": "00000000-0000-0000-0000-000000000000",
+        "newWorkspaceId": "00000000-0000-0000-0000-000000000000",
+        "euclidWorkspaceId": "{{euclidWorkspaceId}}",
+        "sandboxId": "00000000-0000-0000-0000-000000000000",
+        "workspaceId": "00000000-0000-0000-0000-000000000000",
+        "extractionId": "00000000-0000-0000-0000-000000000000",
+        "serviceAccount2UserId": "e244bda7-3854-4e1c-8cf0-85c43520298c",
+        "serviceAccount1": "heron1@microsoft.com",
+        "serviceAccount2": "heron2@microsoft.com",
+        "testUserId": "64dd17b9-0462-4f67-99eb-22d3d83e8199",
+        "expirationInDays": "2",
+        "runMyDataHdiPostman": "false",
+        "runSoftCreateAdfPostman": "false",
+        "extractionType": "\"type\":\"simulated\",",
+        "testRunnerHdiIds": "[]",
+        "deployHdiSandboxId": "",
+        "resourceGroupId": "{{resourceGroupId}}",
+        "resourceGroupName": "{{resourceGroupName}}",
+        "ermResourceId": "{{resourceId}}",
+        "patchId": "{patchId}",
+        "ermResourceName": "{{ermResourceName}}",
+        "newProjectId": "00000000-0000-0000-0000-000000000000",
+        "projectId": "00000000-0000-0000-0000-000000000000",
+        "sandboxShareRequestId": "",
+        "aadMicrosoftHeronAppResourceId": "3b3204ff-b5aa-49c5-843c-e471de97c237",
+        "aadMicrosoftHeronAppClientId": "1fc5ec49-f4cb-43e8-859f-44ff990df534",
+        "aadMicrosoftHeronAppRedirectUrl": "urn:ietf:wg:oauth:2.0:oob",
+        "aadMicrosoftHeronAppScope": "{{aadMicrosoftHeronAppResourceId}}/SubstrateAIService-Dev.Read",
+        "aadTorusHeronAppResourceId": "0fa0cf96-c1b8-48e9-bc0e-bc0cf97f5997",
+        "aadTorusHeronAppClientId": "3ac5d803-e052-4b23-999b-fdb9cb4d184d",
+        "aadTorusHeronAppRedirectUrl": "urn:ietf:wg:oauth:2.0:oob",
+        "aadTorusHeronAppScope": "{{aadTorusHeronAppResourceId}}/user_impersonation"
+      },
+      "dataPropertyOrder": {
+        "&": [
+          "environment",
+          "host",
+          "datasetId",
+          "newDatasetId",
+          "newWorkspaceId",
+          "euclidWorkspaceId",
+          "sandboxId",
+          "workspaceId",
+          "extractionId",
+          "serviceAccount2UserId",
+          "serviceAccount1",
+          "serviceAccount2",
+          "testUserId",
+          "expirationInDays",
+          "runMyDataHdiPostman",
+          "runSoftCreateAdfPostman",
+          "extractionType",
+          "testRunnerHdiIds",
+          "deployHdiSandboxId",
+          "resourceGroupId",
+          "resourceGroupName",
+          "ermResourceId",
+          "ermResourceName",
+          "patchId",
+          "newProjectId",
+          "projectId",
+          "sandboxShareRequestId",
+          "aadMicrosoftHeronAppResourceId",
+          "aadMicrosoftHeronAppClientId",
+          "aadMicrosoftHeronAppRedirectUrl",
+          "aadMicrosoftHeronAppScope",
+          "aadTorusHeronAppResourceId",
+          "aadTorusHeronAppClientId",
+          "aadTorusHeronAppRedirectUrl",
+          "aadTorusHeronAppScope"
+        ]
+      },
+      "color": "#0a45f5",
+      "isPrivate": false,
+      "metaSortKey": 4,
+      "_type": "environment",
+      "description": "Local"
+    },
+    {
+      "_id": "env_9ffd0627185140799ccdcafca21f3327",
+      "parentId": "env_ecced1e6846045e69a033f07fc5194fb",
+      "modified": 1753301654494,
+      "created": 1710449754446,
+      "name": "MARS PPE",
+      "data": {
+        "environment": "PPE",
+        "host": "https://ppe.substrateai.microsoft.net",
+        "datasetId": "00000000-0000-0000-0000-000000000000",
+        "newDatasetId": "00000000-0000-0000-0000-000000000000",
+        "newWorkspaceId": "00000000-0000-0000-0000-000000000000",
+        "euclidWorkspaceId": "{{euclidWorkspaceId}}",
+        "sandboxId": "00000000-0000-0000-0000-000000000000",
+        "workspaceId": "00000000-0000-0000-0000-000000000000",
+        "extractionId": "00000000-0000-0000-0000-000000000000",
+        "newExtractionId": "00000000-0000-0000-0000-000000000000",
+        "serviceAccount2UserId": "e244bda7-3854-4e1c-8cf0-85c43520298c",
+        "serviceAccount1": "heron1@microsoft.com",
+        "serviceAccount2": "heron2@microsoft.com",
+        "testUserId": "64dd17b9-0462-4f67-99eb-22d3d83e8199",
+        "expirationInDays": "7",
+        "runMyDataHdiPostman": "true",
+        "runSoftCreateAdfPostman": "true",
+        "extractionType": "",
+        "testRunnerHdiIds": "[\"a559e56d-e125-43fa-8e3b-dcce48a96347\", \"96e3c5ce-e1b9-4ea0-a285-ae0a7b880f25\", \"da4bfaba-6d19-4f67-b660-cc0fcde7d42c\", \"05a505ec-d23f-450f-bdf7-f1f92d40a808\", \"f583eb64-4a93-44e2-8ced-e5f62f286456\"]",
+        "deployHdiSandboxId": "",
+        "resourceGroupName": "{{resourceGroupName}}",
+        "resourceGroupId": "{{resourceGroupId}}",
+        "ermResourceId": "{{resourceId}}",
+        "patchId": "{patchId}",
+        "ermResourceName": "{{ermResourceName}}",
+        "newProjectId": "00000000-0000-0000-0000-000000000000",
+        "projectId": "00000000-0000-0000-0000-000000000000",
+        "sandboxShareRequestId": "",
+        "aadMicrosoftHeronAppResourceId": "939526d2-506a-4bd2-888d-233272aac963",
+        "aadMicrosoftHeronAppClientId": "ea5bdc6e-9b7a-495f-aafb-b319741e7dd7",
+        "aadMicrosoftHeronAppRedirectUrl": "urn:ietf:wg:oauth:2.0:oob",
+        "aadMicrosoftHeronAppScope": "{{aadMicrosoftHeronAppResourceId}}/user_impersonation",
+        "aadTorusHeronAppResourceId": "3e9313d0-debc-4f0d-85a7-171f92333ba1",
+        "aadTorusHeronAppClientId": "db0c12af-ad38-4526-84ba-cb77436e3b92",
+        "aadTorusHeronAppRedirectUrl": "urn:ietf:wg:oauth:2.0:oob",
+        "aadTorusHeronAppScope": "{{aadTorusHeronAppResourceId}}/user_impersonation"
+      },
+      "dataPropertyOrder": {
+        "&": [
+          "environment",
+          "host",
+          "datasetId",
+          "newDatasetId",
+          "newWorkspaceId",
+          "euclidWorkspaceId",
+          "sandboxId",
+          "workspaceId",
+          "extractionId",
+          "newExtractionId",
+          "serviceAccount2UserId",
+          "serviceAccount1",
+          "serviceAccount2",
+          "testUserId",
+          "expirationInDays",
+          "runMyDataHdiPostman",
+          "runSoftCreateAdfPostman",
+          "extractionType",
+          "testRunnerHdiIds",
+          "deployHdiSandboxId",
+          "resourceGroupId",
+          "resourceGroupName",
+          "ermResourceId",
+          "ermResourceName",
+          "patchId",
+          "newProjectId",
+          "projectId",
+          "sandboxShareRequestId",
+          "aadMicrosoftHeronAppResourceId",
+          "aadMicrosoftHeronAppClientId",
+          "aadMicrosoftHeronAppRedirectUrl",
+          "aadMicrosoftHeronAppScope",
+          "aadTorusHeronAppResourceId",
+          "aadTorusHeronAppClientId",
+          "aadTorusHeronAppRedirectUrl",
+          "aadTorusHeronAppScope"
+        ]
+      },
+      "color": "#eff316",
+      "isPrivate": false,
+      "metaSortKey": 8,
+      "_type": "environment",
+      "description": "MARS PPE"
+    },
+    {
+      "_id": "env_154b4ef2b1c542999ba056fb02e64f0f",
+      "parentId": "env_ecced1e6846045e69a033f07fc5194fb",
+      "modified": 1753301664311,
+      "created": 1710450607408,
+      "name": "COSMIC TEST",
+      "data": {
+        "environment": "INT",
+        "host": "https://webapi.test.srm.microsoft.net",
+        "datasetId": "00000000-0000-0000-0000-000000000000",
+        "newDatasetId": "00000000-0000-0000-0000-000000000000",
+        "newWorkspaceId": "00000000-0000-0000-0000-000000000000",
+        "euclidWorkspaceId": "{{euclidWorkspaceId}}",
+        "sandboxId": "00000000-0000-0000-0000-000000000000",
+        "workspaceId": "00000000-0000-0000-0000-000000000000",
+        "extractionId": "00000000-0000-0000-0000-000000000000",
+        "newExtractionId": "00000000-0000-0000-0000-000000000000",
+        "serviceAccount2UserId": "e244bda7-3854-4e1c-8cf0-85c43520298c",
+        "serviceAccount1": "heron1@microsoft.com",
+        "serviceAccount2": "heron2@microsoft.com",
+        "testUserId": "64dd17b9-0462-4f67-99eb-22d3d83e8199",
+        "expirationInDays": "2",
+        "runMyDataHdiPostman": "false",
+        "runSoftCreateAdfPostman": "false",
+        "extractionType": "\"type\":\"simulated\",",
+        "testRunnerHdiIds": "[]",
+        "deployHdiSandboxId": "",
+        "resourceGroupName": "{{resourceGroupName}}",
+        "resourceGroupId": "{{resourceGroupId}}",
+        "ermResourceId": "{{resourceId}}",
+        "patchId": "{patchId}",
+        "ermResourceName": "{{ermResourceName}}",
+        "newProjectId": "00000000-0000-0000-0000-000000000000",
+        "projectId": "00000000-0000-0000-0000-000000000000",
+        "sandboxShareRequestId": "",
+        "aadMicrosoftHeronAppResourceId": "3b3204ff-b5aa-49c5-843c-e471de97c237",
+        "aadMicrosoftHeronAppClientId": "1fc5ec49-f4cb-43e8-859f-44ff990df534",
+        "aadMicrosoftHeronAppRedirectUrl": "urn:ietf:wg:oauth:2.0:oob",
+        "aadMicrosoftHeronAppScope": "{{aadMicrosoftHeronAppResourceId}}/SubstrateAIService-Dev.Read",
+        "aadTorusHeronAppResourceId": "0fa0cf96-c1b8-48e9-bc0e-bc0cf97f5997",
+        "aadTorusHeronAppClientId": "3ac5d803-e052-4b23-999b-fdb9cb4d184d",
+        "aadTorusHeronAppRedirectUrl": "urn:ietf:wg:oauth:2.0:oob",
+        "aadTorusHeronAppScope": "{{aadTorusHeronAppResourceId}}/user_impersonation"
+      },
+      "dataPropertyOrder": {
+        "&": [
+          "environment",
+          "host",
+          "datasetId",
+          "newDatasetId",
+          "newWorkspaceId",
+          "euclidWorkspaceId",
+          "sandboxId",
+          "workspaceId",
+          "extractionId",
+          "newExtractionId",
+          "serviceAccount2UserId",
+          "serviceAccount1",
+          "serviceAccount2",
+          "testUserId",
+          "expirationInDays",
+          "runMyDataHdiPostman",
+          "runSoftCreateAdfPostman",
+          "extractionType",
+          "testRunnerHdiIds",
+          "deployHdiSandboxId",
+          "resourceGroupId",
+          "resourceGroupName",
+          "ermResourceId",
+          "ermResourceName",
+          "patchId",
+          "newProjectId",
+          "projectId",
+          "sandboxShareRequestId",
+          "aadMicrosoftHeronAppResourceId",
+          "aadMicrosoftHeronAppClientId",
+          "aadMicrosoftHeronAppRedirectUrl",
+          "aadMicrosoftHeronAppScope",
+          "aadTorusHeronAppResourceId",
+          "aadTorusHeronAppClientId",
+          "aadTorusHeronAppRedirectUrl",
+          "aadTorusHeronAppScope"
+        ]
+      },
+      "color": "#1be4d7",
+      "isPrivate": false,
+      "metaSortKey": 15,
+      "_type": "environment",
+      "description": "COSMIC TEST"
+    },
+    {
+      "_id": "env_964ced290df546acaecee970b06187aa",
+      "parentId": "env_ecced1e6846045e69a033f07fc5194fb",
+      "modified": 1753301661636,
+      "created": 1745451427708,
+      "name": "COSMIC TEST",
+      "data": {
+        "environment": "TEST",
+        "host": "https://erm-web-lb.test-eus2.substrate-sip-fabric-erm.eastus2-test.cosmic-int.office.net",
+        "newWorkspaceId": "a4062b54-6168-41e0-984e-30a112584b79",
+        "euclidWorkspaceId": "{{euclidWorkspaceId}}",
+        "subscriptionId": "3db54861-01a1-4ab7-b439-6ab996a21284",
+        "sandboxId": "768e2880-9e9d-470b-b148-345d9bcd8ebd",
+        "workspaceId": "a4062b54-6168-41e0-984e-30a112584b79",
+        "officeRegion": "nam",
+        "azureRegion": "{{azureRegion}}",
+        "runSoftCreateAdfPostman": "false",
+        "deployHdiSandboxId": "",
+        "resourceGroupId": "{{resourceGroupId}}",
+        "resourceGroupName": "{{resourceGroupName}}",
+        "ermResourceId": "{{resourceId}}",
+        "patchId": "{patchId}",
+        "ermResourceName": "{{ermResourceName}}"
+      },
+      "dataPropertyOrder": {
+        "&": [
+          "environment",
+          "host",
+          "newWorkspaceId",
+          "euclidWorkspaceId",
+          "subscriptionId",
+          "sandboxId",
+          "workspaceId",
+          "officeRegion",
+          "azureRegion",
+          "runSoftCreateAdfPostman",
+          "deployHdiSandboxId",
+          "resourceGroupId",
+          "resourceGroupName",
+          "ermResourceId",
+          "patchId",
+          "ermResourceName"
+        ]
+      },
+      "color": "#32ae89",
+      "isPrivate": false,
+      "metaSortKey": 14,
+      "_type": "environment",
+      "description": "COSMIC TEST"
+    },
+    {
+      "_id": "env_7aeb53559690466c8707b0a598c66112",
+      "parentId": "env_ecced1e6846045e69a033f07fc5194fb",
+      "modified": 1753301622828,
+      "created": 1747779433135,
+      "name": "COSMIC SDF",
+      "data": {
+        "environment": "SDF",
+        "host": "https://webapi.sdf.srm.microsoft.net",
+        "newWorkspaceId": "a4062b54-6168-41e0-984e-30a112584b79",
+        "euclidWorkspaceId": "{{euclidWorkspaceId}}",
+        "subscriptionId": "c3a8138a-42c1-47e9-8577-dd9bca08da46",
+        "sandboxId": "768e2880-9e9d-470b-b148-345d9bcd8ebd",
+        "workspaceId": "a4062b54-6168-41e0-984e-30a112584b79",
+        "officeRegion": "nam",
+        "azureRegion": "{{azureRegion}}",
+        "runSoftCreateAdfPostman": "false",
+        "deployHdiSandboxId": "",
+        "resourceGroupId": "{{resourceGroupId}}",
+        "resourceGroupName": "{{resourceGroupName}}",
+        "ermResourceId": "{{resourceId}}",
+        "patchId": "{patchId}",
+        "ermResourceName": "{{ermResourceName}}"
+      },
+      "dataPropertyOrder": {
+        "&": [
+          "environment",
+          "host",
+          "newWorkspaceId",
+          "euclidWorkspaceId",
+          "subscriptionId",
+          "sandboxId",
+          "workspaceId",
+          "officeRegion",
+          "azureRegion",
+          "runSoftCreateAdfPostman",
+          "deployHdiSandboxId",
+          "resourceGroupId",
+          "resourceGroupName",
+          "ermResourceId",
+          "patchId",
+          "ermResourceName"
+        ]
+      },
+      "color": "#b5b734",
+      "isPrivate": false,
+      "metaSortKey": 16,
+      "_type": "environment",
+      "description": "COSMIC SDF"
+    }
+  ]
+}
